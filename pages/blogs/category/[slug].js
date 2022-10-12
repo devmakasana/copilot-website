@@ -89,40 +89,6 @@ export default function BlogCategory({
                 })}
               </CategoryWrap>
             </CategoryWrapper>
-            {/* <div
-              role="navigation"
-              aria-label="List"
-              class="w-pagination-wrapper pagination"
-            >
-              <a
-                href="#"
-                aria-label="Previous Page"
-                class="w-pagination-previous previous"
-              >
-                <img
-                  src="/images/post-arrow-left.svg"
-                  loading="lazy"
-                  alt="Previous arrow"
-                  class="pagination-previous-img"
-                />
-                <Link href={`/blogs/category/page/${currentPage - 1}`}>
-                  <a class="previous-text w-inline-block ">Previous</a>
-                </Link>
-              </a>
-              <a href="#" aria-label="Next Page" class="w-pagination-next next">
-                <Link href={`/blogs/category/page/${currentPage + 1}`}>
-                  <a class="next-text w-inline-block">Next</a>
-                </Link>
-                <Image
-                  src="/images/post-arrow-right.svg"
-                  loading="lazy"
-                  width="16"
-                  height="16"
-                  alt="next arrow"
-                  class="pagination-icon"
-                />
-              </a>
-            </div> */}
           </Container>
         </ScHeroSection>
       </Layout>

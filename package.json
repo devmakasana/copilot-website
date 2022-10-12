@@ -1,10 +1,20 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next",
-    "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start"
+    "prepare": "husky install",
+    "dev": "cross-env REACT_APP_ENV=development next dev",
+    "start": "cross-env REACT_APP_ENV=development next start",
+    "build": "next build",
+    "deploy": "firebase deploy --only hosting:salescamp-admin",
+    "test": "cross-env REACT_APP_ENV=test next test",
+    "eject": "next eject",
+    "lint:js": "eslint --max-warnings 0 src --ext .js,.jsx",
+    "lint:js:fix": "npm run lint:js -- --fix",
+    "lint:css": "npx stylelint \"./src/**/*.(js|jsx)\"",
+    "format": "prettier --write \"src/**/*.{js,scss}\"",
+    "test-format": "prettier --check \"src/**/*.{js,scss}\"",
+    "lint": "npm run lint:js && npm run lint:css && npm run test-format"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.11.1",
@@ -16,6 +26,7 @@
     "contentful": "^9.1.18",
     "contentful-management": "^0.1.1",
     "copy-to-clipboard": "^3.3.1",
+    "cross-env": "^7.0.3",
     "csv": "^0.4.5",
     "date-fns": "2.28.0",
     "fs": "^0.0.1-security",
@@ -42,8 +53,29 @@
     "styletron-react": "^6.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/helper-environment-visitor": "^7.18.9",
+    "@babel/runtime": "^7.19.4",
     "autoprefixer": "^10.4.2",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-styled-components": "^2.0.7",
+    "eslint": "8.24.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-next": "12.3.1",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.1",
     "postcss": "^8.4.7",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.13.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "tailwindcss": "^3.0.23"
   },
   "browser": {
