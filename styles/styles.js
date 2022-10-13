@@ -124,12 +124,17 @@ const FooterText = css`
 const ButtonText = css`
   font-weight: 500;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 26px;
 `;
 const Label = css`
   font-weight: 400;
   font-size: 17px;
   line-height: 20px;
+`;
+const Caption = css`
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
 `;
 
 export {
@@ -149,4 +154,5 @@ export {
   FooterText,
   ButtonText,
   Label,
+  Caption,
 };

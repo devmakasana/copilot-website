@@ -1,5 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
+  ButtonText,
+  HeaderFont,
   Heading1,
   Heading3,
   Heading4,
@@ -11,9 +13,9 @@ import {
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 1254px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 15px;
 `;
 
 const FcfeatureBlock = styled.div`
@@ -107,37 +109,53 @@ const FaqHeading = styled.h2`
   color: ${({ theme }) => theme.colors.lightDark};
 `;
 
-const PrimaryButton = styled.button`
+const PrimaryButton = styled.div`
   a {
-    ${Text2}
+    ${ButtonText}
     display: inline-block;
-    padding: 8px 18px;
+    letter-spacing: 0.02em;
+    padding: 12px 35px;
     border-radius: 26px;
     background-color: ${({ theme }) => theme.colors.primary};
-    box-shadow: 1px 0 3px 0 rgb(0 0 0 / 12%);
     color: ${({ theme }) => theme.colors.whiteColor};
     text-decoration: none;
     transition: all 300ms;
+    border: 1px solid #09aa6c;
     :hover {
       background-color: ${({ theme }) => theme.colors.darkPrimary};
     }
   }
 `;
 
-const SecondryButton = styled.button`
+const SecondryButton = styled.div`
   a {
-    ${Text2}
+    ${ButtonText}
     display: inline-block;
-    padding: 8px 18px;
-    border-radius: 26px;
+    padding: 12px 35px;
+    border: 1px solid #000000;
+    border-radius: 48px;
     background-color: ${({ theme }) => theme.colors.whiteColor};
     box-shadow: 1px 0 3px 0 rgb(0 0 0 / 12%);
-    color: ${({ theme }) => theme.colors.darkColor};
+    color: ${({ theme }) => theme.colors.black};
+    letter-spacing: 0.02em;
     text-decoration: none;
     transition: all 300ms;
     :hover {
       background-color: ${({ theme }) => theme.colors.gainsboro};
     }
+  }
+`;
+const BlackButton = styled.li`
+  a {
+    margin-left: 14px;
+    ${HeaderFont}
+    display: inline-block;
+    padding: 8px 32px;
+    border-radius: 48px;
+    background-color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.neutral};
+    text-decoration: none;
+    transition: all 300ms;
   }
 `;
 
@@ -284,7 +302,7 @@ const RichTextBlock = styled.div`
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
-    font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
+    font-family: ${({ theme }) => theme.fontfamily.Bagoss};
   }
 
   p {
@@ -306,6 +324,9 @@ const RichTextBlock = styled.div`
     border-left: 6px solid ${({ theme }) => theme.colors.borderColor};
     display: block;
     margin-bottom: 24px;
+  }
+  a {
+    font-family: ${({ theme }) => theme.fontfamily.Bagoss};
   }
 
   b {
@@ -561,6 +582,7 @@ const LifeTimeBlock = styled.div`
 
 export {
   PrimaryButton,
+  BlackButton,
   Container,
   SecondryButton,
   Scfeature,

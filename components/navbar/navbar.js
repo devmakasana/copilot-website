@@ -1,8 +1,21 @@
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { StatefulPopover } from "baseui/popover";
 import { useState, useEffect, useCallback } from "react";
+import CopilotLogos from "../../public/images/blacklogo.svg";
+// import DropDownIcon from "../../public/images/Path.svg";
+import {
+  BlackButton,
+  Container,
+  PrimaryButton,
+} from "../../styles/commonStyles";
+import useMobileDevice from "../../hooks/useMobileDevice";
+import { getCookie } from "../../services/analyticsService";
 import {
   NavbarWrapper,
   NavbarInner,
   SalescampLogo,
+  CopilotLogo,
   NavMenu,
   NavigationBlock,
   SpanLink,
@@ -11,8 +24,6 @@ import {
   SignIn,
   DropDownToggle,
   DropdownSpan,
-  DropDownArrow,
-  HorizontalLine,
   DropdownMenu,
   DropDownLink,
   MobileMenu,
@@ -22,15 +33,6 @@ import {
   OverLayBlock,
   TrySalescampBlock,
 } from "./styles";
-import Salescamplogo from "../../public/images/salescamp_logo.svg";
-import SalescampWhitelogo from "../../public/images/Footer-Logo.svg";
-// import DropDownIcon from "../../public/images/Path.svg";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { StatefulPopover } from "baseui/popover";
-import { Container, PrimaryButton } from "../../styles/commonStyles";
-import useMobileDevice from "../../hooks/useMobileDevice";
-import { getCookie } from "../../services/analyticsService";
 
 export default function Navbar({ BlogDetails }) {
   const mobile = useMobileDevice();
@@ -39,8 +41,8 @@ export default function Navbar({ BlogDetails }) {
 
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
   const handleMobileMenu = useCallback(() => {
-    setIsOpenMobileMenu(!isOpenMobileMenu), [isOpenMobileMenu];
-  });
+    setIsOpenMobileMenu(!isOpenMobileMenu);
+  }, [isOpenMobileMenu]);
   let isScrollPage;
   const [clientWindowHeight, setClientWindowHeight] = useState("");
   const handleScroll = () => {
@@ -79,16 +81,46 @@ export default function Navbar({ BlogDetails }) {
           mobile={mobile}
         >
           <NavigationBlock>
-            <SpanLink className={router.pathname == "/pricing" ? "active" : ""}>
+            <SpanLink
+              className={router.pathname === "/pricing" ? "active" : ""}
+            >
               <Link href="/pricing">
+                <a>Why Copilot </a>
+              </Link>
+            </SpanLink>
+            <SpanLink
+              className={router.pathname === "/features" ? "active" : ""}
+            >
+              <Link href="/features">
                 <a>Pricing </a>
               </Link>
             </SpanLink>
             <SpanLink
-              className={router.pathname == "/features" ? "active" : ""}
+              className={router.pathname === "/features" ? "active" : ""}
             >
               <Link href="/features">
                 <a>Features </a>
+              </Link>
+            </SpanLink>
+            <SpanLink
+              className={router.pathname === "/features" ? "active" : ""}
+            >
+              <Link href="/features">
+                <a>Solutions </a>
+              </Link>
+            </SpanLink>
+            <SpanLink
+              className={router.pathname === "/features" ? "active" : ""}
+            >
+              <Link href="/features">
+                <a>Company </a>
+              </Link>
+            </SpanLink>
+            <SpanLink
+              className={router.pathname === "/features" ? "active" : ""}
+            >
+              <Link href="/features">
+                <a>Resources </a>
               </Link>
             </SpanLink>
             {!mobile && (
@@ -111,39 +143,36 @@ export default function Navbar({ BlogDetails }) {
                   },
                 }}
               >
-                <DropDownToggle>
+                {/* <DropDownToggle>
                   <DropdownSpan>Resources</DropdownSpan>
                   <DropDownArrow>
                     <img src="/images/Path.svg"></img>
                   </DropDownArrow>
-                </DropDownToggle>
+                </DropDownToggle> */}
               </StatefulPopover>
             )}
             {mobile && <DropDownList />}
-            <HorizontalLine></HorizontalLine>
+            {/* <HorizontalLine></HorizontalLine> */}
           </NavigationBlock>
           <HeaderBtnGroup>
             <SignInSignUpBtn>
-              {!isUserLogin ? (
-                <>
-                  <SignIn>
-                    <Link href="/">
-                      <a>Sign in</a>
-                    </Link>
-                  </SignIn>
-                  <PrimaryButton>
-                    <Link href="/">
-                      <a>Sign Up</a>
-                    </Link>
-                  </PrimaryButton>
-                </>
-              ) : (
-                <PrimaryButton>
+              <>
+                <SignIn>
                   <Link href="/">
-                    <a>Open copilot</a>
+                    <a>Login</a>
                   </Link>
-                </PrimaryButton>
-              )}
+                </SignIn>
+                <SignIn>
+                  <Link href="/">
+                    <a>Book demo</a>
+                  </Link>
+                </SignIn>
+                <BlackButton>
+                  <Link href="/">
+                    <a>Start trial</a>
+                  </Link>
+                </BlackButton>
+              </>
             </SignInSignUpBtn>
           </HeaderBtnGroup>
         </NavMenu>
@@ -167,19 +196,21 @@ export default function Navbar({ BlogDetails }) {
           </DropDownToggle>
         )}
         <DropdownMenu>
-          <DropDownLink className={router.pathname == "/blogs" ? "active" : ""}>
+          <DropDownLink
+            className={router.pathname === "/blogs" ? "active" : ""}
+          >
             <Link href="/blogs">
               <a>Blogs</a>
             </Link>
           </DropDownLink>
           <DropDownLink
-            className={router.pathname == "/updates" ? "active" : ""}
+            className={router.pathname === "/updates" ? "active" : ""}
           >
             <Link href="/updates">
               <a>Updates</a>
             </Link>
           </DropDownLink>
-          <DropDownLink className={router.pathname == "/help" ? "active" : ""}>
+          <DropDownLink className={router.pathname === "/help" ? "active" : ""}>
             <Link href="/help">
               <a>Help Center</a>
             </Link>
@@ -190,7 +221,7 @@ export default function Navbar({ BlogDetails }) {
             </Link>
           </DropDownLink>
           <DropDownLink
-            className={router.pathname == "/free-sales-tools" ? "active" : ""}
+            className={router.pathname === "/free-sales-tools" ? "active" : ""}
           >
             <Link href="/free-sales-tools">
               <a>Sales Tools</a>
@@ -208,25 +239,25 @@ export default function Navbar({ BlogDetails }) {
           <NavbarInner>
             <Link href="/">
               {isScrollPage && BlogDetails ? (
-                <SalescampLogo
+                <CopilotLogo
                   loading="lazy"
-                  width="160"
-                  height="38"
-                  src={Salescamplogo.src}
-                ></SalescampLogo>
+                  width="143"
+                  height="31"
+                  src={CopilotLogos.src}
+                ></CopilotLogo>
               ) : BlogDetails ? (
                 <SalescampLogo
                   loading="lazy"
-                  width="160"
-                  height="38"
-                  src={SalescampWhitelogo.src}
+                  width="143"
+                  height="31"
+                  src={CopilotLogos.src}
                 ></SalescampLogo>
               ) : (
                 <SalescampLogo
                   loading="lazy"
-                  width="160"
-                  height="38"
-                  src={Salescamplogo.src}
+                  width="143"
+                  height="31"
+                  src={CopilotLogos.src}
                 ></SalescampLogo>
               )}
             </Link>

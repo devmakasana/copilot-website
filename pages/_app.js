@@ -1,15 +1,16 @@
+/* eslint-disable max-len */
 import "../styles/index.css";
 import { DefaultSeo } from "next-seo";
 import { useEffect } from "react";
-import SEO from "../next-seo.config";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import { BaseProvider, LightTheme } from "baseui";
 import { Provider as StyletronProvider } from "styletron-react";
+import Script from "next/script";
+import { useRouter } from "next/router";
+import SEO from "../next-seo.config";
 import { styletron } from "../styletron";
 import { initAnalytics, setAnalyticUser } from "../services/analyticsService";
 import { GTM_ID, pageview } from "../lib/gtm";
-import Script from "next/script";
-import { useRouter } from "next/router";
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -23,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Bagoss', sans-serif;
   }
   :root {
+    // eslint-disable-next-line max-len, max-len
     --shadowColor: 0px 1px 3px rgba(10, 10, 46, 0.1), 0px 3px 14px rgba(10, 10, 46, 0.04), 0px 8px 32px rgba(10, 10, 46, 0.08), 0px 30px 84px rgba(10, 10, 46, 0.1);
     --shadowCard:  0px 3px 10px rgba(0, 0, 0, 0.1);
     --inputBoxShadow: 0 0 0 3px #afcdff;
@@ -35,33 +37,54 @@ const theme = {
     Everett: "Everett",
   },
   colors: {
-    primary: "#3C7CE8",
-    darkPrimary: "#2e69ce",
-    textColor: "#1a1a1a",
-    darkColor: "#000000",
-    lightDark: "#333333",
+    primary: "#09AA6C",
+    title: "#131313",
+    body: "#424242",
+    lightgray: "#878787",
+    midiumgray: "#5B5B5B",
+    black: "#000000",
     whiteColor: "#FFFFFF",
-    borderColor: "#E4E4E5",
-    placeholder: "#9E9E9E",
-    lightBg: "#F1F3F9",
-    romanSilver: "#7D8696",
-    darkBlue: "#202632",
-    manatee: "#949CAC",
-    gainsboro: "#dfdfdf",
-    arsenic: "#3F4450",
-    eerieBlack: "#131823",
-    mediumGray: "#C0C3CA",
-    lightGray: "#EBEEF2",
-    darkGray: "#595959",
-    disable: "#DDDDDD",
-    lotion: "#FAFAFA",
-    water: "#D0F0FD",
-    teaGreen: "#C4FFC1",
-    Onyx: "#383838",
-    romanSilver: "#868995",
-    blackOlive: "#404040",
-    ghostWhite: "#F9FBFF",
-    antiFlashWhite: "#F2F2F2",
+    neutral: "#F3F3F2",
+    darkPrimary: "#2e69ce",
+    textColor: "#424242",
+    lightDark: "#333333",
+    greendark: "#00160E",
+    greenmiddark: "#003F27",
+    greenmidlight: "#7DDAA0",
+    greenlight: "#E3FFEE",
+    blueprimary: "#00AFB9",
+    bluedark: "#01292C",
+    bluemiddark: "#01292C",
+    bluemidlight: "#7ADCE1",
+    bluelight: "#E0FBFD",
+    purpleprimary: "#989AF2",
+    purpledark: "#01011D",
+    purplemiddark: "#3D3FBE",
+    purplemidlight: "#B6B6EC",
+    purplelight: "#EFEEFF",
+    orangeprimary: "#FD8C2E",
+    orangedark: "#1C0C00",
+    orangemiddark: "#CF650D",
+    orangemidlight: "#FFA55B",
+    orangelight: "#FFEDDE",
+    yellow: "#F3DA1A",
+    yellowdark: "#171500",
+    yellowmiddark: "#958602",
+    yellowmidlight: "#F4E77E",
+    yellowlight: "#FDFBEC",
+    brown: "#D7B79E",
+    browndark: "#120800",
+    brownmiddark: "#85664D",
+    brownmidlight: "#F4D8C4",
+    brownlight: "#FFF7F0",
+    magenta: "#F35B80",
+    magentadark: "#27000A",
+    magentamiddark: "#B8294B",
+    magentamidlight: "#FF96AF",
+    magentalight: "#FFEFF3",
+    bordercolor: "#BEBEBF",
+    footercolor: "#F3F3F2",
+    caption: "#6E847C",
   },
 };
 
@@ -78,6 +101,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
+        id="afterInteractive"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `

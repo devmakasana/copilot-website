@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Text2 } from "../../styles/styles";
+import { HeaderFont, Text2 } from "../../styles/styles";
 
 const NavbarWrapper = styled.div`
   position: fixed;
@@ -8,8 +8,8 @@ const NavbarWrapper = styled.div`
   right: 0;
   bottom: auto;
   z-index: 999;
-  height: 86px;
-  max-width: 1200px;
+  padding: 20px 0;
+  /* max-width: 1224px; */
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -28,14 +28,18 @@ const NavbarWrapper = styled.div`
 `;
 const NavbarInner = styled.div`
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
+  gap: 56px;
 `;
 const SalescampLogo = styled.img`
   cursor: pointer;
 `;
+const CopilotLogo = styled.img`
+  cursor: pointer;
+`;
 const TrySalescampBlock = styled.div`
-display: none;
+  display: none;
   ${(props) =>
     props.BlogDetails &&
     css`
@@ -51,6 +55,8 @@ display: none;
 const NavMenu = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     padding: 12px;
@@ -73,32 +79,37 @@ const NavMenu = styled.div`
       display: flex;
     `}
 `;
-const NavigationBlock = styled.div`
+const NavigationBlock = styled.ul`
   display: flex;
   align-items: center;
+  margin: 0 -14px;
+  /* justify-content: space-between; */
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     width: 100%;
     align-items: flex-start;
   }
 `;
-const SpanLink = styled.span`
+const SpanLink = styled.li`
   &.active {
     a {
       color: ${({ theme }) => theme.colors.darkPrimary};
     }
   }
   a {
-    ${Text2}
-    margin-right: 16px;
-    padding: 4px 8px;
-    color: ${({ theme }) => theme.colors.textColor};
+    ${HeaderFont}
+    margin: 0 14px;
+    color: ${({ theme }) => theme.colors.title};
     transition: all 300ms;
     cursor: pointer;
-    :hover {
+    /* :hover {
       color: ${({ theme }) => theme.colors.darkPrimary};
-    }
+    } */
   }
+  a:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
   @media only screen and (max-width: 768px) {
     margin-bottom: 4px;
     width: 100%;
@@ -116,13 +127,17 @@ const SpanLink = styled.span`
   }
 `;
 const HeaderBtnGroup = styled.div`
-  display: flex;
-  align-items: center;
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `;
-const SignInSignUpBtn = styled.div`
+const SignInSignUpBtn = styled.ul`
+  display: flex;
+  align-items: center;
+  margin-left: -14px;
+  button {
+    margin-left: 14px;
+  }
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 12px 0;
@@ -132,17 +147,18 @@ const SignInSignUpBtn = styled.div`
     justify-content: center;
   }
 `;
-const SignIn = styled.span`
+const SignIn = styled.li`
   a {
-    margin-right: 8px;
-    padding: 8px 16px;
+    ${HeaderFont};
+    margin: 0 14px;
+    /* padding: 8px 16px; */
     align-items: center;
     transition: all 300ms;
-    color: ${({ theme }) => theme.colors.textColor};
+    color: ${({ theme }) => theme.colors.title};
     cursor: pointer;
     text-decoration: none;
     :hover {
-      color: ${({ theme }) => theme.colors.darkPrimary};
+      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;
@@ -324,15 +340,15 @@ const ThirdLine = styled.span`
       transform: translate3d(0px, -8px, 0px) rotateZ(-45deg);
     `}
   ${(props) =>
-  props.BlogDetails &&
-    props.isScrollPage ?
-    css`
-      background-color: ${({ theme }) => theme.colors.darkColor};
-    `
-    : props.BlogDetails ? 
-    css`
-      background-color: ${({ theme }) => theme.colors.whiteColor};
-    `: css``}
+    props.BlogDetails && props.isScrollPage
+      ? css`
+          background-color: ${({ theme }) => theme.colors.darkColor};
+        `
+      : props.BlogDetails
+      ? css`
+          background-color: ${({ theme }) => theme.colors.whiteColor};
+        `
+      : css``}
 `;
 
 const OverLayBlock = styled.div`
@@ -381,4 +397,5 @@ export {
   FirstLine,
   OverLayBlock,
   TrySalescampBlock,
+  CopilotLogo,
 };
