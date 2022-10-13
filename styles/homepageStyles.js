@@ -1,10 +1,13 @@
 import styled, { css } from "styled-components";
 import {
   Body1,
+  Body3,
+  Body4,
   Caption,
   HeaderFont,
   Heading1,
   Heading3,
+  Heading4,
   Text1,
   Text2,
 } from "./styles";
@@ -393,6 +396,110 @@ const ReviewRight = styled.div`
     color: ${({ theme }) => theme.colors.caption};
   }
 `;
+const BusinessSection = styled.div``;
+const BusinessText = styled.div`
+  max-width: 975px;
+  width: 100%;
+  padding-bottom: 50px;
+  h2 {
+    ${Heading3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.title};
+    padding-bottom: 20px;
+  }
+  p {
+    ${Body3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    max-width: 852px;
+    width: 100%;
+  }
+`;
+const Functionality = styled.div`
+  padding: 120px 0;
+`;
+const TopFunctionWrap = styled.div`
+  width: 100%;
+  max-width: 918px;
+  h3 {
+    margin: 0 0 20px 0;
+    ${Heading3};
+    color: ${({ theme }) => theme.colors.title};
+  }
+  p {
+    ${Body3};
+    color: ${({ theme }) => theme.colors.body};
+    margin: 0;
+  }
+`;
+const BottomFunction = styled.div`
+  margin-top: 40px;
+`;
+const TabRow = styled.div`
+  display: flex;
+  margin-left: -20px;
+`;
+const TabBox = styled.div`
+  display: flex;
+  margin: 0 20px;
+`;
+const TabName = styled.span`
+  display: block;
+  margin-left: 12px;
+  ${Body4};
+  color: ${({ theme }) => theme.colors.body};
+`;
+const LeftB = styled.div`
+  border-top: 1px solid #00160e;
+  border-left: 1px solid #00160e;
+  border-bottom: 1px solid #00160e;
+  width: 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+`;
+const RightB = styled.div`
+  border-top: 1px solid #00160e;
+  border-right: 1px solid #00160e;
+  border-bottom: 1px solid #00160e;
+  width: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+`;
+const CenterBox = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+`;
+const ContainWrap = styled.div`
+  margin-top: 32px;
+  display: flex;
+  width: 100%;
+`;
+const LeftDetail = styled.div`
+  width: 100%;
+  max-width: 278px;
+  margin-right: 28px;
+  h4 {
+    margin: 0 0 16px 0;
+    ${Heading4};
+    color: ${({ theme }) => theme.colors.title};
+  }
+  p {
+    ${Body4};
+    letter-spacing: 0.02em;
+    color: ${({ theme }) => theme.colors.body};
+    margin: 0 0 28px 0;
+  }
+`;
+const RightDetail = styled.div`
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 18px 18px 13px;
+  width: 100%;
+`;
+const Extension = styled.div``;
 export {
   Scfeaturetitle,
   FeatureTag,
@@ -425,4 +532,19 @@ export {
   ReviewLogo,
   Reviewimage,
   ReviewRight,
+  BusinessSection,
+  BusinessText,
+  Functionality,
+  TopFunctionWrap,
+  BottomFunction,
+  TabRow,
+  TabBox,
+  TabName,
+  LeftB,
+  RightB,
+  CenterBox,
+  ContainWrap,
+  LeftDetail,
+  RightDetail,
+  Extension,
 };

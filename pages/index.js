@@ -42,7 +42,24 @@ import {
   ReviewLogo,
   Reviewimage,
   ReviewRight,
+  BusinessSection,
+  BusinessText,
+  Functionality,
+  TopFunctionWrap,
+  BottomFunction,
+  TabRow,
+  TabBox,
+  TabName,
+  LeftB,
+  RightB,
+  CenterBox,
+  ContainWrap,
+  LeftDetail,
+  RightDetail,
+  Extension,
 } from "../styles/homepageStyles";
+import { Heading2 } from "../styles/styles";
+import BusunessSlider from "../components/business-slider/businessslider";
 
 export default function NewIndex() {
   const [isLightBox, setIsLightBox] = useState(false);
@@ -76,56 +93,6 @@ export default function NewIndex() {
               </SecondryButton>
             </HeroBtnBlock>
 
-            {/* <HeroRight>
-              <MainModal>
-                <a
-                  onClick={() => {
-                    setIsLightBox(true);
-                  }}
-                >
-                  <Image
-                    src="/images/main-hero.webp"
-                    alt="hero-feature"
-                    height={392}
-                    width={599}
-                  ></Image>
-                  <PlayerWrapper>
-                    <PlayIcon>
-                      <Image
-                        src="/images/Path_1.svg"
-                        height={28}
-                        width={26}
-                        alt="play-icon"
-                      ></Image>
-                    </PlayIcon>
-                  </PlayerWrapper>
-                </a>
-              </MainModal>
-              <EmailModal>
-                <Image
-                  src="/images/email-modal.webp"
-                  alt="email-feature"
-                  width={284}
-                  height={263}
-                ></Image>
-              </EmailModal>
-              <SmsModal>
-                <Image
-                  src="/images/sms-modal.webp"
-                  width={316}
-                  height={193}
-                  alt="sms-feature"
-                ></Image>
-              </SmsModal>
-              <CallModal>
-                <Image
-                  src="/images/call-modal.webp"
-                  width={233}
-                  height={98}
-                  alt="call-feature"
-                ></Image>
-              </CallModal>
-            </HeroRight> */}
             <ReviewLogo>
               <>
                 <Image
@@ -173,11 +140,152 @@ export default function NewIndex() {
             </ReviewLogo>
           </Container>
         </HeroSection>
-        <Container>
-          {/* <Heading1>
-            Thousands of businesses are streamlining the client experience
-          </Heading1> */}
-        </Container>
+        <BusinessSection>
+          <Container>
+            <BusinessText>
+              <h2>
+                Thousands of businesses are streamlining the client experience
+              </h2>
+              <p>
+                Whether you’re starting a new business, looking to improve
+                operations, or want to accelerate growth, our goal to be a
+                valuable partner at every stage of the business lifecycle.{" "}
+              </p>
+              <SecondryButton>
+                <Link href="/request-demo">
+                  <a>Why Copilot</a>
+                </Link>
+              </SecondryButton>
+            </BusinessText>
+          </Container>
+          <BusunessSlider />
+        </BusinessSection>
+        <Functionality>
+          <Container>
+            <TopFunctionWrap>
+              <h3>Powerful out-of-the box functionality, ready to go.</h3>
+              <p>
+                Provide clients a uniform experience with on-brand design,
+                combined in-product notifications, and consistent email
+                notifications. And with modularily built-in, start with just one
+                module and add more when the time is right.
+              </p>
+            </TopFunctionWrap>
+            <BottomFunction>
+              <TabRow>
+                <TabBox>
+                  <LeftB></LeftB>
+                  <CenterBox>
+                    <Image
+                      src="/images/msg.svg"
+                      width={44}
+                      height={44}
+                      alt="msg-icon"
+                    />
+                    <TabName>Messaging</TabName>
+                  </CenterBox>
+                  <RightB></RightB>
+                </TabBox>
+                <TabBox>
+                  <CenterBox>
+                    <Image
+                      src="/images/fileicon.svg"
+                      width={44}
+                      height={44}
+                      alt="msg-icon"
+                    />
+                    <TabName>File</TabName>
+                  </CenterBox>
+                </TabBox>
+                <TabBox>
+                  <CenterBox>
+                    <Image
+                      src="/images/diskicon.svg"
+                      width={44}
+                      height={44}
+                      alt="msg-icon"
+                    />
+                    <TabName>Helpdesk</TabName>
+                  </CenterBox>
+                </TabBox>
+                <TabBox>
+                  <CenterBox>
+                    <Image
+                      src="/images/formsicon.svg"
+                      width={44}
+                      height={44}
+                      alt="msg-icon"
+                    />
+                    <TabName>Forms</TabName>
+                  </CenterBox>
+                </TabBox>
+                <TabBox>
+                  <CenterBox>
+                    <Image
+                      src="/images/billingicon.svg"
+                      width={44}
+                      height={44}
+                      alt="msg-icon"
+                    />
+                    <TabName>Billing</TabName>
+                  </CenterBox>
+                </TabBox>
+                <TabBox>
+                  <CenterBox>
+                    <Image
+                      src="/images/contractsicon.svg"
+                      width={44}
+                      height={44}
+                      alt="bill-icon"
+                    />
+                    <TabName>Contracts</TabName>
+                  </CenterBox>
+                </TabBox>
+              </TabRow>
+              <ContainWrap>
+                <LeftDetail>
+                  <h4>Messaging</h4>
+                  <p>
+                    Let clients securely and seamlessly message you from your
+                    portal. And give your team the ability to centralize client
+                    communication and stay organized.{" "}
+                  </p>
+                  <SecondryButton>
+                    <Link href="/request-demo">
+                      <a>Learn More</a>
+                    </Link>
+                  </SecondryButton>
+                </LeftDetail>
+                <RightDetail>
+                  <Image
+                    src="/images/msgscreen.png"
+                    width={881}
+                    height={550}
+                    alt="msg-screen"
+                  />
+                </RightDetail>
+              </ContainWrap>
+            </BottomFunction>
+          </Container>
+        </Functionality>
+        <Extension>
+          <Container>
+            <BusinessText>
+              <h2>Go even further with Extensions</h2>
+              <p>
+                Streamline the client experience even more by embedding products
+                you already use and surface them in the client experience —
+                Calendly for scheduling, Airtable kanban boards, ClickUp forms,
+                Google Data Studio dashboards, and thousands more.
+              </p>
+              <SecondryButton>
+                <Link href="/request-demo">
+                  <a>See all Extensions </a>
+                </Link>
+              </SecondryButton>
+            </BusinessText>
+          </Container>
+        </Extension>
         <LogosManilock>
           <LogosText>Trusted By Innovative Companies Worldwide</LogosText>
           <LogoListWrap>
