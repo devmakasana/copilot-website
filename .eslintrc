@@ -1,5 +1,5 @@
 {
-  "extends": ["next/core-web-vitals","next","react-app"],
+  "extends": ["next/core-web-vitals", "next", "react-app"],
 
   "rules": {
     "react/prop-types": 0,
@@ -14,10 +14,7 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     ],
     "jsx-a11y/media-has-caption": 0,
@@ -34,21 +31,11 @@
         "allowAfterThis": true
       }
     ],
-    "max-len": [
-      "error",
-      {
-        "code": 120
-      }
-    ],
     "jsx-a11y/label-has-associated-control": [
       2,
       {
-        "labelAttributes": [
-          "label"
-        ],
-        "controlComponents": [
-          "Field"
-        ],
+        "labelAttributes": ["label"],
+        "controlComponents": ["Field"],
         "depth": 3
       }
     ],

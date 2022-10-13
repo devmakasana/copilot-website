@@ -1,5 +1,13 @@
 import styled, { css } from "styled-components";
-import { Heading1, Heading3, HeroPara, Text1, Text2 } from "./styles";
+import {
+  Body1,
+  Caption,
+  HeaderFont,
+  Heading1,
+  Heading3,
+  Text1,
+  Text2,
+} from "./styles";
 
 const Scfeaturetitle = styled.div`
   max-width: 720px;
@@ -154,11 +162,12 @@ const FeatureLinkBlock = styled.div``;
 
 const HeroSection = styled.div`
   width: 100%;
-  padding: 156px 0 84px 0;
-  background-image: url("/images/Frame-1-figma-1.webp");
-  background-position: center;
+  padding: 160px 0 120px 0;
+  text-align: center;
+  /* background-image: url("/images/Frame-1-figma-1.webp"); */
+  /* background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   overflow: hidden;
   @media only screen and (max-width: 768px) {
     padding: 136px 0 84px 0;
@@ -169,7 +178,7 @@ const HeroSection = styled.div`
 `;
 
 const HeroMainBlock = styled.div`
-  display: flex;
+  /* display: flex;
   align-items: center;
   margin-bottom: 100px;
   @media only screen and (max-width: 991px) {
@@ -180,7 +189,7 @@ const HeroMainBlock = styled.div`
   }
   @media only screen and (max-width: 991px) {
     margin-bottom: 40px;
-  }
+  } */
 `;
 
 const HeroLeft = styled.div`
@@ -193,18 +202,19 @@ const HeroLeft = styled.div`
   }
 `;
 const HeroHeading = styled.h1`
-  ${Heading1}
-  color: ${({ theme }) => theme.colors.textColor};
-  margin: 0 0 24px 0;
+  ${Heading1};
+  color: ${({ theme }) => theme.colors.greendark};
+  margin: 0 0 40px 0;
   @media only screen and (max-width: 991px) {
     text-align: center;
   }
 `;
 
 const Para = styled.p`
-  ${HeroPara}
+  ${Body1}
+  letter-spacing: 0.02em;
   margin: 0;
-  color: ${({ theme }) => theme.colors.blackOlive};
+  color: ${({ theme }) => theme.colors.title};
   @media only screen and (max-width: 991px) {
     text-align: center;
     ${Text1}
@@ -212,12 +222,11 @@ const Para = styled.p`
 `;
 
 const HeroBtnBlock = styled.div`
-  margin-top: 48px;
-  button {
-    :last-child {
-      margin-left: 16px;
-    }
-  }
+  margin: 42px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
   @media only screen and (max-width: 991px) {
     display: flex;
     align-items: center;
@@ -366,7 +375,24 @@ const CloseButton = styled.button`
   }
 `;
 const Iframe = styled.iframe``;
-
+const ReviewLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+const Reviewimage = styled.div`
+  display: flex;
+  gap: 3px;
+`;
+const ReviewRight = styled.div`
+  p {
+    ${Caption};
+    margin: 0;
+    letter-spacing: 0.02em;
+    color: ${({ theme }) => theme.colors.caption};
+  }
+`;
 export {
   Scfeaturetitle,
   FeatureTag,
@@ -396,4 +422,7 @@ export {
   VideoContainer,
   CloseButton,
   Iframe,
+  ReviewLogo,
+  Reviewimage,
+  ReviewRight,
 };

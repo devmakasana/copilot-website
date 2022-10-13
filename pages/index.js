@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Layout from "/components/layout";
+import Image from "next/image";
+import { NextSeo } from "next-seo";
+import Link from "next/link";
 import Productivity from "../components/productivity/productivity";
 import Testimonial from "../components/testimonial/testimonial";
-import { NextSeo } from "next-seo";
 import Navbar from "../components/navbar/navbar";
-import Link from "next/link";
 import Slider from "../components/slider/slider";
 import CTA from "../components/cta/cta";
 import {
@@ -30,25 +31,18 @@ import {
   LearnMoreLink,
   FeatureWrapBlock,
   HeroSection,
-  HeroMainBlock,
-  HeroLeft,
   HeroHeading,
   Para,
   HeroBtnBlock,
-  HeroRight,
-  MainModal,
-  PlayerWrapper,
-  EmailModal,
-  SmsModal,
-  CallModal,
-  PlayIcon,
   LightBox,
   LightBoxContainer,
   VideoContainer,
   CloseButton,
   Iframe,
+  ReviewLogo,
+  Reviewimage,
+  ReviewRight,
 } from "../styles/homepageStyles";
-import Image from "next/image";
 
 export default function NewIndex() {
   const [isLightBox, setIsLightBox] = useState(false);
@@ -63,134 +57,184 @@ export default function NewIndex() {
         <Navbar />
         <HeroSection>
           <Container>
-            <HeroMainBlock>
-              <HeroLeft>
-                <HeroHeading>Supercharge Your Sales Team</HeroHeading>
-                <Para>
-                  copilot gives you a stunning customisable sales suite to drive
-                  growth at every stage of the sales cycle.
-                </Para>
-                <HeroBtnBlock>
-                  <PrimaryButton>
-                    <Link href="/">
-                      <a>Get Started for Free</a>
-                    </Link>
-                  </PrimaryButton>
-                  <SecondryButton>
-                    <Link href="/request-demo">
-                      <a>Request a Demo</a>
-                    </Link>
-                  </SecondryButton>
-                </HeroBtnBlock>
-              </HeroLeft>
-              <HeroRight>
-                <MainModal>
-                  <a
-                    onClick={() => {
-                      setIsLightBox(true);
-                    }}
-                  >
-                    <Image
-                      src="/images/main-hero.webp"
-                      alt="hero-feature"
-                      height={392}
-                      width={599}
-                    ></Image>
-                    <PlayerWrapper>
-                      <PlayIcon>
-                        <Image
-                          src="/images/Path_1.svg"
-                          height={28}
-                          width={26}
-                          alt="play-icon"
-                        ></Image>
-                      </PlayIcon>
-                    </PlayerWrapper>
-                  </a>
-                </MainModal>
-                <EmailModal>
+            <HeroHeading>It’s all about connection.</HeroHeading>
+            <Para>
+              Give your customers a one-stop shop experience with a client
+              portal that streamlines messaging, payments, file-sharing, help
+              centers, dashboard access, and more.
+            </Para>
+            <HeroBtnBlock>
+              <PrimaryButton>
+                <Link href="/">
+                  <a>Start Trial</a>
+                </Link>
+              </PrimaryButton>
+              <SecondryButton>
+                <Link href="/request-demo">
+                  <a>Book Demo</a>
+                </Link>
+              </SecondryButton>
+            </HeroBtnBlock>
+
+            {/* <HeroRight>
+              <MainModal>
+                <a
+                  onClick={() => {
+                    setIsLightBox(true);
+                  }}
+                >
                   <Image
-                    src="/images/email-modal.webp"
-                    alt="email-feature"
-                    width={284}
-                    height={263}
+                    src="/images/main-hero.webp"
+                    alt="hero-feature"
+                    height={392}
+                    width={599}
                   ></Image>
-                </EmailModal>
-                <SmsModal>
+                  <PlayerWrapper>
+                    <PlayIcon>
+                      <Image
+                        src="/images/Path_1.svg"
+                        height={28}
+                        width={26}
+                        alt="play-icon"
+                      ></Image>
+                    </PlayIcon>
+                  </PlayerWrapper>
+                </a>
+              </MainModal>
+              <EmailModal>
+                <Image
+                  src="/images/email-modal.webp"
+                  alt="email-feature"
+                  width={284}
+                  height={263}
+                ></Image>
+              </EmailModal>
+              <SmsModal>
+                <Image
+                  src="/images/sms-modal.webp"
+                  width={316}
+                  height={193}
+                  alt="sms-feature"
+                ></Image>
+              </SmsModal>
+              <CallModal>
+                <Image
+                  src="/images/call-modal.webp"
+                  width={233}
+                  height={98}
+                  alt="call-feature"
+                ></Image>
+              </CallModal>
+            </HeroRight> */}
+            <ReviewLogo>
+              <>
+                <Image
+                  src="/images/g2.svg"
+                  alt="hero-feature"
+                  height={32}
+                  width={33}
+                />
+              </>
+              <ReviewRight>
+                <Reviewimage>
                   <Image
-                    src="/images/sms-modal.webp"
-                    width={316}
-                    height={193}
-                    alt="sms-feature"
-                  ></Image>
-                </SmsModal>
-                <CallModal>
+                    src="/images/star.svg"
+                    alt="hero-feature"
+                    height={20}
+                    width={20}
+                  />
                   <Image
-                    src="/images/call-modal.webp"
-                    width={233}
-                    height={98}
-                    alt="call-feature"
-                  ></Image>
-                </CallModal>
-              </HeroRight>
-            </HeroMainBlock>
-            <LogosManilock>
-              <LogosText>Trusted By Innovative Companies Worldwide</LogosText>
-              <LogoListWrap>
-                <LogosList>
-                  <LogosItem>
-                    <Image
-                      src="/images/heliostar-logo_1.svg"
-                      width={175}
-                      height={32}
-                      alt="heliostar"
-                    ></Image>
-                  </LogosItem>
-                  <LogosItem>
-                    <Image
-                      src="/images/bearbook-logos.svg"
-                      width={162}
-                      height={37}
-                      alt="bearbook"
-                    ></Image>
-                  </LogosItem>
-                  <LogosItem>
-                    <Image
-                      src="/images/MailCanvas-logos.svg"
-                      width={172}
-                      height={48}
-                      alt="mailcanvas"
-                    ></Image>
-                  </LogosItem>
-                  <LogosItem>
-                    <Image
-                      src="/images/Be-Designer-logos.svg"
-                      width={138}
-                      height={40}
-                      alt="be-designer"
-                    ></Image>
-                  </LogosItem>
-                  <LogosItem>
-                    <Image
-                      src="/images/eventgenius-logos.svg"
-                      width={145}
-                      height={32}
-                      alt="eventgenius"
-                    ></Image>
-                  </LogosItem>
-                </LogosList>
-              </LogoListWrap>
-            </LogosManilock>
+                    src="/images/star.svg"
+                    alt="hero-feature"
+                    height={20}
+                    width={20}
+                  />
+                  <Image
+                    src="/images/star.svg"
+                    alt="hero-feature"
+                    height={20}
+                    width={20}
+                  />
+                  <Image
+                    src="/images/star.svg"
+                    alt="hero-feature"
+                    height={20}
+                    width={20}
+                  />
+                  <Image
+                    src="/images/star.svg"
+                    alt="hero-feature"
+                    height={20}
+                    width={20}
+                  />
+                </Reviewimage>
+                <p>Based on 100+ reviews</p>
+              </ReviewRight>
+            </ReviewLogo>
           </Container>
         </HeroSection>
+        <Container>
+          {/* <Heading1>
+            Thousands of businesses are streamlining the client experience
+          </Heading1> */}
+        </Container>
+        <LogosManilock>
+          <LogosText>Trusted By Innovative Companies Worldwide</LogosText>
+          <LogoListWrap>
+            <LogosList>
+              <LogosItem>
+                <Image
+                  src="/images/heliostar-logo_1.svg"
+                  width={175}
+                  height={32}
+                  alt="heliostar"
+                ></Image>
+              </LogosItem>
+              <LogosItem>
+                <Image
+                  src="/images/bearbook-logos.svg"
+                  width={162}
+                  height={37}
+                  alt="bearbook"
+                ></Image>
+              </LogosItem>
+              <LogosItem>
+                <Image
+                  src="/images/MailCanvas-logos.svg"
+                  width={172}
+                  height={48}
+                  alt="mailcanvas"
+                ></Image>
+              </LogosItem>
+              <LogosItem>
+                <Image
+                  src="/images/Be-Designer-logos.svg"
+                  width={138}
+                  height={40}
+                  alt="be-designer"
+                ></Image>
+              </LogosItem>
+              <LogosItem>
+                <Image
+                  src="/images/eventgenius-logos.svg"
+                  width={145}
+                  height={32}
+                  alt="eventgenius"
+                ></Image>
+              </LogosItem>
+            </LogosList>
+          </LogoListWrap>
+        </LogosManilock>
+
         <FcfeatureWrap>
           <Container>
             <Scfeaturetitle>
               <FeatureTag>
                 <span>Awesome Features</span>
               </FeatureTag>
+
               <SectionHeading>
-                Simplify your Sales & Customer Success with copilot's excellent
+                Simplify your Sales & Customer Success with copilots excellent
                 features.
               </SectionHeading>
             </Scfeaturetitle>
