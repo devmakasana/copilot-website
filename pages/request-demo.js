@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { useState, useCallback } from "react";
+import ReactFlagsSelect from "react-flags-select";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar/navbar";
 import Productivity from "../components/productivity/productivity";
-import Testimonial from "../components/testimonial/testimonial";
-import ReactFlagsSelect from "react-flags-select";
 import {
   Container,
   LogoListWrap,

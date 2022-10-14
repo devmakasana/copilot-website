@@ -6,12 +6,7 @@ import Layout from "/components/layout";
 import { NextSeo } from "next-seo";
 import { getAllBlogs } from "../../lib/contentful-blogs";
 import Navbar from "../../components/navbar/navbar";
-import {
-  BlogHeroHeading,
-  BlogPara,
-  BlogSlideMain,
-  BlogTop,
-} from "../../styles/blogStyles";
+import { BlogHeroHeading, BlogPara, BlogTop } from "../../styles/blogStyles";
 import { Container, LinearBg, ScHeroSection } from "../../styles/commonStyles";
 
 export default function Company({ allPosts }) {
@@ -32,7 +27,6 @@ export default function Company({ allPosts }) {
                 Tips and ideas to help you delight your customers
               </BlogPara>
             </BlogTop>
-            <BlogSlideMain>{blogSlideView}</BlogSlideMain>
           </Container>
         </ScHeroSection>
       </Layout>
@@ -44,6 +38,6 @@ export async function getStaticProps({ params, preview = false }) {
   const Posts = (await getAllBlogs(preview)) ?? [];
 
   return {
-    props: { preview, allPosts, currentPage, allCategory, Posts },
+    props: { preview, Posts },
   };
 }

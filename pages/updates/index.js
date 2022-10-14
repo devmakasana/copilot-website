@@ -38,7 +38,9 @@ export default function Updates({ allPosts }) {
             <UpdateHeader>
               <TagList>
                 {item?.tags?.map((item, index) => {
-                  return <TagItem>{item}</TagItem>;
+                  return (
+                    <TagItem key={`taglist_index_${index}`}>{item}</TagItem>
+                  );
                 })}
               </TagList>
               <PublishSpan>

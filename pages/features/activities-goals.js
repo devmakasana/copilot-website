@@ -1,9 +1,11 @@
+import Image from "next/image";
+import Link from "next/link";
+import { NextSeo } from "next-seo";
 import Layout from "../../components/layout";
 import Navbar from "../../components/navbar/navbar";
 import Productivity from "../../components/productivity/productivity";
 import Testimonial from "../../components/testimonial/testimonial";
 import FeatureNavigation from "../../components/feature-navigation/feature-navigation";
-import { NextSeo } from "next-seo";
 import CTA from "../../components/cta/cta";
 import {
   Container,
@@ -11,7 +13,6 @@ import {
   PrimaryButton,
   SecondryButton,
 } from "../../styles/commonStyles";
-import Link from "next/link";
 import {
   FeatureBtn,
   FeatureHeading,
@@ -29,7 +30,6 @@ import {
   ScFeatureLeft,
   ScFeatureRight,
 } from "../../styles/featureStyles";
-import Image from "next/image";
 
 export default function NewIndex() {
   return (
