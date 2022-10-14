@@ -60,6 +60,7 @@ import {
 } from "../styles/homepageStyles";
 import { Heading2 } from "../styles/styles";
 import BusunessSlider from "../components/business-slider/businessslider";
+import ExtensionSlider from "../components/extensionslider/extensionslider";
 
 export default function NewIndex() {
   const [isLightBox, setIsLightBox] = useState(false);
@@ -285,6 +286,7 @@ export default function NewIndex() {
               </SecondryButton>
             </BusinessText>
           </Container>
+          <ExtensionSlider />
         </Extension>
         <LogosManilock>
           <LogosText>Trusted By Innovative Companies Worldwide</LogosText>
