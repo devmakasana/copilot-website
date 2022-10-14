@@ -124,7 +124,7 @@ const PrimaryButton = styled.div`
     transition: all 300ms;
     border: 1px solid #09aa6c;
     :hover {
-      background-color: ${({ theme }) => theme.colors.darkPrimary};
+      background-color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;
