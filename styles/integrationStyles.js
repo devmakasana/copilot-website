@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PrimaryButton, SecondryButton } from "./commonStyles";
-import { Heading3, Heading5, Text2 } from "./styles";
+import { Heading3, Heading5, Body2 } from "./styles";
 
 const IntegrationBlock = styled.div`
   padding: 50px 0 120px 0;
@@ -69,7 +69,7 @@ const IntegrationTop = styled.div`
   }
   p {
     margin: 0 0 24px 0;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -87,7 +87,7 @@ const LearnMoreLink = styled.div`
   align-items: center;
   span {
     margin-right: 6px;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.primary};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
   }

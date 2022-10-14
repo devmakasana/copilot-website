@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Heading2, Text2, Text3 } from "../../styles/styles";
+import { Heading2, Body2, Body3 } from "../../styles/styles";
 
 const MobilePricingMain = styled.div``;
 const MobilePricingHeader = styled.div`
@@ -159,7 +159,7 @@ const GetStarted = styled.div`
 `;
 const PricingMainFeature = styled.p`
   margin: 0 0 5px 0;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.Onyx};
   ${(props) =>
     props.darkMode &&
@@ -198,7 +198,7 @@ const FeatureListItem = styled.li`
   background-position: 0 5px;
   background-size: 10px;
   background-repeat: no-repeat;
-  ${Text3}
+  ${Body3}
   font-weight: 400;
   color: ${({ theme }) => theme.colors.Onyx};
   letter-spacing: 0.128px;

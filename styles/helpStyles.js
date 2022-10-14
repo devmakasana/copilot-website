@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading4, Text1, Text2 } from "./styles";
+import { Heading4, Body1, Body2 } from "./styles";
 
 const HelpContainer = styled.div`
   max-width: 870px;
@@ -21,7 +21,7 @@ const HelpContent = styled.div`
   }
   p {
     margin: 0;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
 `;
@@ -97,7 +97,7 @@ const HelpCategoryItem = styled.li`
   justify-content: center;
   margin-top: 32px;
   font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
-  ${Text2}
+  ${Body2}
   a {
     color: ${({ theme }) => theme.colors.textColor};
     transition: all 300ms;
@@ -179,7 +179,7 @@ const EmojiBlock = styled.div``;
 const FeedbackTitle = styled.p`
   margin: 0;
   text-align: center;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.lightDark};
 `;
 

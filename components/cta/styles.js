@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading, Heading2, Text1 } from "../../styles/styles";
+import { Heading, Heading2, Body1 } from "../../styles/styles";
 
 const CtaInner = styled.div`
   text-align: center;

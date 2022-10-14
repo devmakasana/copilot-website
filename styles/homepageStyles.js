@@ -8,8 +8,8 @@ import {
   Heading1,
   Heading3,
   Heading4,
-  Text1,
-  Text2,
+  Body1,
+  Body2,
 } from "./styles";
 
 const Scfeaturetitle = styled.div`
@@ -26,7 +26,7 @@ const FeatureTag = styled.div`
   border-radius: 26px;
   background-color: ${({ theme }) => theme.colors.lightBg};
   span {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.manatee};
   }
 `;
@@ -70,7 +70,7 @@ const LearnMoreLink = styled.div`
   opacity: 0;
   transition: all 300ms;
   span {
-    ${Text2};
+    ${Body2};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
     margin: 0 6px 0 0;
     color: ${({ theme }) => theme.colors.primary};
@@ -91,7 +91,7 @@ const FeatureImg = styled.div`
 `;
 const FeatureCardTitle = styled.h3`
   margin: 16px 0 0 0;
-  ${Text2}
+  ${Body2}
   text-align: center;
   color: ${({ theme }) => theme.colors.textColor};
   transition: all 300ms;
@@ -220,7 +220,7 @@ const Para = styled.p`
   color: ${({ theme }) => theme.colors.title};
   @media only screen and (max-width: 991px) {
     text-align: center;
-    ${Text1}
+    ${Body1}
   }
 `;
 

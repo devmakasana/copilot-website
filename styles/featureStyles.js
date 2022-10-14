@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading1, Heading3, Heading4, HeroPara, Text2, Text3 } from "./styles";
+import { Heading1, Heading3, Heading4, HeroPara, Body2, Body3 } from "./styles";
 
 const FeatureBtnBlock = styled.div`
   margin-top: 32px;
@@ -101,7 +101,7 @@ const FeatureCardHead = styled.h2`
 `;
 const FeatureCardPara = styled.p`
   margin: 0 0 12px 0;
-  ${Text3}
+  ${Body3}
   font-weight: 500;
   color: ${({ theme }) => theme.colors.romanSilver};
 `;
@@ -110,7 +110,7 @@ const LearnMoreLink = styled.div`
   align-items: center;
   span {
     margin-right: 6px;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.primary};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
   }
@@ -245,7 +245,7 @@ const FeatureSubHeading = styled.h2`
 `;
 const FeatureSubPara = styled.p`
   margin: 12px 0 16px 0;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
   @media only screen and (max-width: 768px) {
     margin: 12px 0;
@@ -259,7 +259,7 @@ const FeatureList = styled.ul`
 const FeatureListItem = styled.li`
   padding-left: 25px;
   margin: 0 0 12px 0;
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.textColor};
   background-image: url("/images/blue_checked.svg");
   background-repeat: no-repeat;
@@ -280,7 +280,7 @@ const FeatureRichText = styled.div`
     color: ${({ theme }) => theme.colors.lightDark};
   }
   p {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
     margin: 0 0 10px 0;
     strong {
@@ -316,7 +316,7 @@ const CustomCard = styled.div`
 `;
 const CustomSpan = styled.span`
   margin-top: 10px;
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.Onyx};
 `;
 const RecordSpan = styled.span`

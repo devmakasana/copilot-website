@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading2, Text2 } from "../../styles/styles";
+import { Heading2, Body2 } from "../../styles/styles";
 
 const ProductivityMain = styled.div``;
 const ProductivityWrap = styled.div`
@@ -122,7 +122,7 @@ const ProductivityHead = styled.h3`
 `;
 const ProductivitySpan = styled.span`
   display: block;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.manatee};
 `;
 

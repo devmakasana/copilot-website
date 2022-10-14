@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading3, Text1, Text2 } from "./styles";
+import { Heading3, Body1, Body2 } from "./styles";
 
 const LinkBlock = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ const LinkBlock = styled.div`
   margin: 32px 0 0 0;
   a {
     margin: 0 10px;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.primary};
   }
   @media only screen and (max-width: 479px) {
@@ -53,12 +53,12 @@ const TagItem = styled.li`
   padding: 3px 12px;
   border-radius: 26px;
   background-color: ${({ theme }) => theme.colors.lightBg};
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
   margin: 0 10px 8px 0;
 `;
 const PublishSpan = styled.span`
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
 `;
 const UpdateContent = styled.div``;
@@ -69,7 +69,7 @@ const UpdateHeading = styled.h2`
 `;
 const UpdatePara = styled.p`
   margin: 0 0 20px 0;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.textColor};
 `;
 const UpdateImage = styled.div`

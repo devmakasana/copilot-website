@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Heading1, Heading2, Heading5, HeroPara, Text2 } from "./styles";
+import { Heading1, Heading2, Heading5, HeroPara, Body2 } from "./styles";
 
 const TemplateWrapper = styled.div`
   margin: 50px 0 0 0;
@@ -122,7 +122,7 @@ const LearnMoreLink = styled.div`
   align-items: center;
   span {
     margin-right: 6px;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.primary};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
   }
@@ -262,7 +262,7 @@ const HighLightBlock = styled.div`
       background-position: 0% 5px;
       background-size: auto;
       background-repeat: no-repeat;
-      ${Text2}
+      ${Body2}
       color: ${({ theme }) => theme.colors.textColor};
     }
   }

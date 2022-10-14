@@ -6,9 +6,9 @@ import {
   Heading3,
   Heading4,
   HeroPara,
-  Text1,
-  Text2,
-  Text3,
+  Body1,
+  Body2,
+  Body3,
 } from "./styles";
 
 const Container = styled.div`
@@ -246,7 +246,7 @@ const BlogBreadCum = styled.div`
   align-items: center;
 `;
 const BreadCumLink = styled.div`
-  ${Text3}
+  ${Body3}
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.romanSilver};
   a {
@@ -268,10 +268,10 @@ const RichTextBlock = styled.div`
   }
 
   p {
-    ${Text1}
+    ${Body1}
     color: ${({ theme }) => theme.colors.blackOlive};
     @media only screen and (max-width: 768px) {
-      ${Text2}
+      ${Body2}
     }
   }
 
@@ -387,7 +387,7 @@ const RichTextBlock = styled.div`
 
 const LogosManilock = styled.div``;
 const LogosText = styled.p`
-  ${Text2}
+  ${Body2}
   margin-bottom: 16px;
   font-weight: 600;
   text-align: center;
@@ -467,7 +467,7 @@ const SearchInput = styled.input`
     box-shadow: var(--inputBoxShadow);
   }
   ::placeholder {
-    ${Text3}
+    ${Body3}
     font-weight: 500;
   }
   @media only screen and (max-width: 768px) {
@@ -497,7 +497,7 @@ const PanelBlock = styled.div`
   flex-wrap: wrap;
 `;
 const BlogSpan = styled.span`
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.romanSilver};
   transition: all 300ms;
   a {
@@ -560,10 +560,10 @@ const CategoryContentBlock = styled.div`
 `;
 
 const PublishDate = styled.span`
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
   @media only screen and (max-width: 479px) {
-    ${Text3}
+    ${Body3}
   }
 `;
 const LifeTimeMainBlock = styled.div`

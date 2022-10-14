@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading5, Text2 } from "./styles";
+import { Heading5, Body2 } from "./styles";
 
 const SalesToolsMain = styled.div``;
 const SalesToolsContainer = styled.div`
@@ -45,7 +45,7 @@ const ResourceTitle = styled.div`
   }
   p {
     margin: 0;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
 `;

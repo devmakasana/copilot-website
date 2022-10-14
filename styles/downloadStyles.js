@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PrimaryButton } from "./commonStyles";
-import { Heading2, Text1 } from "./styles";
+import { Heading2, Body1 } from "./styles";
 
 const DownLoadBlock = styled.div`
   h2 {
@@ -23,7 +23,7 @@ const DownloadPara = styled.p`
   max-width: 700px;
   width: 100%;
   margin: auto;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.romanSilver};
   text-align: center;
   a {
