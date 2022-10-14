@@ -8,6 +8,7 @@ import {
   Heading1,
   Heading3,
   Heading4,
+  Label,
   Text1,
   Text2,
 } from "./styles";
@@ -208,6 +209,9 @@ const HeroHeading = styled.h1`
   ${Heading1};
   color: ${({ theme }) => theme.colors.greendark};
   margin: 0 0 40px 0;
+  span {
+    color: ${({ theme }) => theme.colors.primary};
+  }
   @media only screen and (max-width: 991px) {
     text-align: center;
   }
@@ -439,11 +443,23 @@ const BottomFunction = styled.div`
 `;
 const TabRow = styled.div`
   display: flex;
-  margin-left: -20px;
 `;
 const TabBox = styled.div`
-  display: flex;
-  margin: 0 20px;
+  a {
+    ${Label};
+    color: ${({ theme }) => theme.colors.lightgray};
+    padding: 7px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    :hover {
+      color: ${({ theme }) => theme.colors.title};
+    }
+    :active {
+      background-color: #f4d8c4;
+      color: ${({ theme }) => theme.colors.black};
+    }
+  }
 `;
 const TabName = styled.span`
   display: block;

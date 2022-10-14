@@ -3,42 +3,18 @@ import Layout from "/components/layout";
 import Image from "next/image";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import Productivity from "../components/productivity/productivity";
-import Testimonial from "../components/testimonial/testimonial";
 import Navbar from "../components/navbar/navbar";
-import Slider from "../components/slider/slider";
 import CTA from "../components/cta/cta";
 import {
   Container,
-  FcfeatureWrap,
-  LogoListWrap,
-  LogosItem,
-  LogosList,
-  LogosManilock,
-  LogosText,
   PrimaryButton,
   SecondryButton,
 } from "../styles/commonStyles";
 import {
-  FeatureBlock,
-  FeatureTag,
-  Scfeaturetitle,
-  SectionHeading,
-  FeatureItem,
-  FeatureLinkBlock,
-  FeatureCardTitle,
-  FeatureImg,
-  LearnMoreLink,
-  FeatureWrapBlock,
   HeroSection,
   HeroHeading,
   Para,
   HeroBtnBlock,
-  LightBox,
-  LightBoxContainer,
-  VideoContainer,
-  CloseButton,
-  Iframe,
   ReviewLogo,
   Reviewimage,
   ReviewRight,
@@ -90,7 +66,9 @@ export default function NewIndex() {
         <Navbar />
         <HeroSection>
           <Container>
-            <HeroHeading>It’s all about connection.</HeroHeading>
+            <HeroHeading>
+              It’s all about connection<span>.</span>
+            </HeroHeading>
             <Para>
               Give your customers a one-stop shop experience with a client
               portal that streamlines messaging, payments, file-sharing, help
@@ -190,72 +168,34 @@ export default function NewIndex() {
             <BottomFunction>
               <TabRow>
                 <TabBox>
-                  <LeftB></LeftB>
-                  <CenterBox>
-                    <Image
-                      src="/images/msg.svg"
-                      width={44}
-                      height={44}
-                      alt="msg-icon"
-                    />
-                    <TabName>Messaging</TabName>
-                  </CenterBox>
-                  <RightB></RightB>
+                  <Link href={"#"}>
+                    <a>Messaging</a>
+                  </Link>
                 </TabBox>
                 <TabBox>
-                  <CenterBox>
-                    <Image
-                      src="/images/fileicon.svg"
-                      width={44}
-                      height={44}
-                      alt="msg-icon"
-                    />
-                    <TabName>File</TabName>
-                  </CenterBox>
+                  <Link href={"#"}>
+                    <a>File</a>
+                  </Link>
                 </TabBox>
                 <TabBox>
-                  <CenterBox>
-                    <Image
-                      src="/images/diskicon.svg"
-                      width={44}
-                      height={44}
-                      alt="msg-icon"
-                    />
-                    <TabName>Helpdesk</TabName>
-                  </CenterBox>
+                  <Link href={"#"}>
+                    <a>Helpdesk</a>
+                  </Link>
                 </TabBox>
                 <TabBox>
-                  <CenterBox>
-                    <Image
-                      src="/images/formsicon.svg"
-                      width={44}
-                      height={44}
-                      alt="msg-icon"
-                    />
-                    <TabName>Forms</TabName>
-                  </CenterBox>
+                  <Link href={"#"}>
+                    <a>Forms</a>
+                  </Link>
                 </TabBox>
                 <TabBox>
-                  <CenterBox>
-                    <Image
-                      src="/images/billingicon.svg"
-                      width={44}
-                      height={44}
-                      alt="msg-icon"
-                    />
-                    <TabName>Billing</TabName>
-                  </CenterBox>
+                  <Link href={"#"}>
+                    <a>Billing</a>
+                  </Link>
                 </TabBox>
                 <TabBox>
-                  <CenterBox>
-                    <Image
-                      src="/images/contractsicon.svg"
-                      width={44}
-                      height={44}
-                      alt="bill-icon"
-                    />
-                    <TabName>Contracts</TabName>
-                  </CenterBox>
+                  <Link href={"#"}>
+                    <a>Contracts</a>
+                  </Link>
                 </TabBox>
               </TabRow>
               <ContainWrap>

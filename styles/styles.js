@@ -129,7 +129,7 @@ const ButtonText = css`
 const Label = css`
   font-weight: 400;
   font-size: 17px;
-  line-height: 20px;
+  line-height: 21px;
 `;
 const Caption = css`
   font-weight: 400;

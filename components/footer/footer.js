@@ -212,19 +212,19 @@ export default function Footer() {
                 <FooterMenu>
                   <p>Features</p>
                   <FooterMenuList>
-                    <p>Messaging</p>
-                    <p>Billing</p>
-                    <p>Files </p>
-                    <p>Forms</p>
-                    <p>Helpdesk</p>
-                    <p>Contracts</p>
-                    <p>Extensions</p>
+                    <a>Messaging</a>
+                    <a>Billing</a>
+                    <a>Files </a>
+                    <a>Forms</a>
+                    <a>Helpdesk</a>
+                    <a>Contracts</a>
+                    <a>Extensions</a>
                   </FooterMenuList>
                   <FooterMenu className="padding">
                     <p>Platform</p>
                     <FooterMenuList>
-                      <p>Automations</p>
-                      <p>Extensions</p>
+                      <a>Automations</a>
+                      <a>Extensions</a>
                     </FooterMenuList>
                   </FooterMenu>
                 </FooterMenu>
@@ -233,17 +233,17 @@ export default function Footer() {
                 <FooterMenu>
                   <p>Use cases</p>
                   <FooterMenuList>
-                    <p>Accounting & Financial Services</p>
-                    <p>Marketing & Creative</p>
-                    <p>Legal Services</p>
-                    <p>Startups & Tech-enabled services</p>
+                    <a>Accounting & Financial Services</a>
+                    <a>Marketing & Creative</a>
+                    <a>Legal Services</a>
+                    <a>Startups & Tech-enabled services</a>
                   </FooterMenuList>
                   <FooterMenu className="padding">
                     <p>Company</p>
                     <FooterMenuList>
-                      <p>Pricing</p>
-                      <p>Enterprise</p>
-                      <p>Jobs</p>
+                      <a>Pricing</a>
+                      <a>Enterprise</a>
+                      <a>Jobs</a>
                     </FooterMenuList>
                   </FooterMenu>
                 </FooterMenu>
@@ -252,19 +252,19 @@ export default function Footer() {
                 <FooterMenu>
                   <p>Resources</p>
                   <FooterMenuList>
-                    <p>Blog</p>
-                    <p>API Reference</p>
-                    <p>Security</p>
-                    <p>What’s new</p>
-                    <p>Help center</p>
-                    <p>Video tutorials</p>
+                    <a>Blog</a>
+                    <a>API Reference</a>
+                    <a>Security</a>
+                    <a>What’s new</a>
+                    <a>Help center</a>
+                    <a>Video tutorials</a>
                   </FooterMenuList>
                   <FooterMenu className="padding">
                     <p>Learn</p>
                     <FooterMenuList>
-                      <p>Customizing your portal</p>
-                      <p>Customizing your portal</p>
-                      <p>Why you need a customer billing portal</p>
+                      <a>Customizing your portal</a>
+                      <a>Customizing your portal</a>
+                      <a>Why you need a customer billing portal</a>
                     </FooterMenuList>
                   </FooterMenu>
                 </FooterMenu>

@@ -219,11 +219,17 @@ const FotterMenuLeft = styled.div`
   }
 `;
 const FooterMenuList = styled.li`
-  p {
+  a {
     ${FooterText};
     color: ${({ theme }) => theme.colors.lightgray};
+    display: block;
+    padding-bottom: 10px;
+    cursor: pointer;
     :last-child {
       padding: 0;
+    }
+    :hover {
+      color: ${({ theme }) => theme.colors.title};
     }
   }
 `;
