@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text1, Text2 } from "../../styles/styles";
+import { Body1, Body2 } from "../../styles/styles";
 
 const TestimonialWrap = styled.div`
   border-radius: 24px;
@@ -183,7 +183,7 @@ const SlideImage = styled.div`
 `;
 const ContentUpper = styled.div`
   p {
-    ${Text2}
+    ${Body2}
     text-align: left;
     margin: 0 0 24px 0;
     color: ${({ theme }) => theme.colors.whiteColor};
@@ -193,7 +193,7 @@ const ContentUpper = styled.div`
   }
   @media only screen and (max-width: 768px) {
     p {
-      ${Text1}
+      ${Body1}
     }
   }
 `;
@@ -208,16 +208,16 @@ const TestimonialName = styled.div`
     color: ${({ theme }) => theme.colors.whiteColor};
   }
   span {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.whiteColor};
   }
   @media only screen and (max-width: 768px) {
     margin-top: 30px;
     h5 {
-      ${Text2}
+      ${Body2}
     }
     span {
-      ${Text1}
+      ${Body1}
     }
   }
 `;

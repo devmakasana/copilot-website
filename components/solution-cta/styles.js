@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { PrimaryButton, SecondryButton } from "../../styles/commonStyles";
-import { Heading3, Text2 } from "../../styles/styles";
+import { Heading3, Body2 } from "../../styles/styles";
 
 const NewsLatterSection = styled.div`
   padding: 80px 0;
@@ -19,7 +19,7 @@ const NewLatterInner = styled.div`
   p {
     text-align: center;
     margin: 0;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.whiteColor};
   }
 `;

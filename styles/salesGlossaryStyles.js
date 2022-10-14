@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading2, HeroPara, Text1, Text2 } from "./styles";
+import { Heading2, HeroPara, Body1, Body2 } from "./styles";
 
 const SearchHeader = styled.div`
   padding: 16px;
@@ -120,7 +120,7 @@ const GloassaryCardInnerItem = styled.li`
   margin: 0;
   a {
     text-align: left;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
     transition: all 300ms;
     :hover {
@@ -164,7 +164,7 @@ const BackOption = styled.div`
   display: flex;
   border-bottom: 1px solid ${({ theme }) => theme.colors.borderColor};
   a {
-    ${Text2}
+    ${Body2}
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -205,7 +205,7 @@ const DetailTitleBlock = styled.div`
 `;
 const DetailPara = styled.p`
   margin: 0;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.blackOlive};
 `;
 

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading2, Heading6, Text2 } from "./styles";
+import { Heading2, Heading6, Body2 } from "./styles";
 
 const FormBlock = styled.div`
   margin: 32px 0 94px 0;
@@ -44,7 +44,7 @@ const Input = styled.input`
   padding: 12px 20px;
   border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.textColor};
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   :focus {
@@ -53,7 +53,7 @@ const Input = styled.input`
     box-shadow: var(--inputBoxShadow);
   }
   ::placeholder {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.mediumGray};
   }
 `;
@@ -63,7 +63,7 @@ const PhoneInput = styled.div`
   width: 100%;
   height: 50px;
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.textColor};
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 5px;

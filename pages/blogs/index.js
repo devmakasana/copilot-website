@@ -52,7 +52,6 @@ import {
   ScHeroSection,
 } from "../../styles/commonStyles";
 import useMobileDevice from "../../hooks/useMobileDevice";
-import Testimonial from "../../components/testimonial/testimonial";
 
 export default function Blogs({
   allPosts,
@@ -82,7 +81,10 @@ export default function Blogs({
     return allPost?.slice(0, 6)?.map((item, index) => {
       let computedClass = index === activeIndex ? "slides active" : "slides";
       return (
-        <BlogHeroBlock className={computedClass}>
+        <BlogHeroBlock
+          className={computedClass}
+          key={`blogslides_index_${index}`}
+        >
           <BlogLeft>
             <Image
               src={item?.banner?.url}
@@ -159,7 +161,7 @@ export default function Blogs({
         </BlogHeroBlock>
       );
     });
-  }, [allPost, onPrevClick, onNextClick]);
+  }, [allPost, activeIndex, mobile, onPrevClick, onNextClick]);
 
   return (
     <>
@@ -206,7 +208,8 @@ export default function Blogs({
                     {allPost
                       ?.filter((item) =>
                         item?.categoryCollection?.items.some(
-                          (categoryItem) => categoryItem?.name == category?.name
+                          (categoryItem) =>
+                            categoryItem?.name === category?.name
                         )
                       )
                       .slice(0, 3)
@@ -341,15 +344,15 @@ export async function getStaticProps({ params, preview = false }) {
   const Posts = (await getAllBlogs(preview)) ?? [];
   const currentPage = 1;
   const perPage = 9;
-  var nextPage = (currentPage + 1).toString();
+  // var nextPage = (currentPage + 1).toString();
   const allPosts = Posts.slice(
     (currentPage - 1) * perPage,
     (currentPage - 1) * perPage + perPage
   );
   const getAllCategory = function (allPosts) {
     var tags = [];
-    allPosts?.map((item, index) => {
-      item?.categoryCollection?.items?.map((tag) => {
+    allPosts?.forEach((item, index) => {
+      item?.categoryCollection?.items?.forEach((tag) => {
         if (tag?.name) tags.push({ name: tag?.name, slug: tag?.slug });
       });
     });

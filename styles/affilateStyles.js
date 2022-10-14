@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading1, Heading2, HeroPara, Text1 } from "./styles";
+import { Heading1, Heading2, HeroPara, Body1 } from "./styles";
 
 const AffilateHeading = styled.h1`
   margin: 0 0 16px 0;
@@ -38,7 +38,7 @@ const AffilateSubHeading = styled.h2`
 `;
 const AffilateSubPara = styled.p`
   margin: 0 0 20px 0;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.romanSilver};
 `;
 const AffilateList = styled.ul`
@@ -53,7 +53,7 @@ const AffilateListItem = styled.li`
   background-position: 0% 9px;
   background-size: auto;
   background-repeat: no-repeat;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.romanSilver};
   :last-child {
     margin: 0;
@@ -72,7 +72,7 @@ const AffilateOlList = styled.ol`
 `;
 const AffilateOlListItem = styled.li`
   margin: 0 0 12px 0;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.romanSilver};
   :last-child {
     margin: 0;

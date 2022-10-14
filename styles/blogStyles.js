@@ -5,9 +5,9 @@ import {
   Heading3,
   Heading5,
   HeroPara,
-  Text1,
-  Text2,
-  Text3,
+  Body1,
+  Body2,
+  Body3,
 } from "./styles";
 
 const BlogHeroSection = styled.div`
@@ -97,12 +97,12 @@ const BlogSocialItem = styled.li`
 `;
 const TableContent = styled.span`
   display: block;
-  ${Text1}
+  ${Body1}
   font-weight: 700;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.darkGray};
   @media only screen and (max-width: 768px) {
-    ${Text2}
+    ${Body2}
     font-weight: 700;
   }
 `;
@@ -116,7 +116,7 @@ const TableContentList = styled.ul`
   }
 `;
 const TableContentItem = styled.li`
-  ${Text2}
+  ${Body2}
   margin: 0 0 20px 0;
   padding: 0 0 0 32px;
   font-weight: 400;
@@ -138,7 +138,7 @@ const TableContentItem = styled.li`
     background-position: 0 4px;
   }
   @media only screen and (max-width: 768px) {
-    ${Text2}
+    ${Body2}
     margin: 0 0 16px 0;
   }
 `;
@@ -218,7 +218,7 @@ const BlogSubHeading = styled.h2`
 `;
 const BlogSubPara = styled.p`
   margin: 0 0 32px 0;
-  ${Text2}
+  ${Body2}
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -280,7 +280,7 @@ const NextBtn = styled.div`
   }
 `;
 const SliderindexSpan = styled.span`
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.lightDark};
   margin: 0 12px;
 `;
@@ -396,7 +396,7 @@ const CateCard = styled.div`
   }
   p {
     margin: 0;
-    ${Text3}
+    ${Body3}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
 `;

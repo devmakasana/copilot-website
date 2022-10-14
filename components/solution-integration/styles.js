@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading3, Text2 } from "../../styles/styles";
+import { Heading3, Body2 } from "../../styles/styles";
 
 const IntegrationMain = styled.div`
   background-color: ${({ theme }) => theme.colors.ghostWhite};
@@ -29,7 +29,7 @@ const IntegrationLeft = styled.div`
   }
   p {
     margin: 16px 0;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
   @media only screen and (max-width: 991px) {
@@ -71,7 +71,7 @@ const LearnMoreLink = styled.div`
   align-items: center;
   span {
     margin-right: 6px;
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.primary};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
   }

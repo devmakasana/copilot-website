@@ -1,11 +1,11 @@
+import Link from "next/link";
 import {
   Container,
   FcfeatureWrap,
   PrimaryButton,
   SecondryButton,
 } from "../../styles/commonStyles";
-import { SectionHeading, CtaInner, CtaBtn, CtaRight, CtaPara } from "./styles";
-import Link from "next/link";
+import { CtaInner, CtaBtn } from "./styles";
 
 export default function CTA() {
   return (

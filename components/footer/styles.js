@@ -3,9 +3,9 @@ import {
   Body4,
   FooterText,
   Heading2,
-  Text1,
-  Text2,
-  Text3,
+  Body1,
+  Body2,
+  Body3,
 } from "../../styles/styles";
 
 const FooterSection = styled.div`
@@ -64,7 +64,7 @@ const SectionHeading = styled.h2`
 `;
 const FooterPara = styled.p`
   margin: 16px 0 0 0;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.manatee};
 `;
 const FooterLinkBlock = styled.div`
@@ -100,13 +100,13 @@ const FooterLinkItem = styled.li`
   }
   h3 {
     margin: 0;
-    ${Text1}
+    ${Body1}
     font-weight: 700;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.whiteColor};
   }
   a {
-    ${Text2}
+    ${Body2}
     letter-spacing: .2px;
     color: ${({ theme }) => theme.colors.manatee};
     text-transform: capitalize;
@@ -141,7 +141,7 @@ const FooterLastBlock = styled.div`
   }
 `;
 const CopyRightText = styled.p`
-  ${Text2}
+  ${Body2}
   margin: 24px 0;
   color: ${({ theme }) => theme.colors.manatee};
 `;
@@ -189,7 +189,7 @@ const MobileFooterListItem = styled.li`
     margin-bottom: 0;
   }
   a {
-    ${Text3}
+    ${Body3}
     color: ${({ theme }) => theme.colors.mediumGray};
   }
 `;

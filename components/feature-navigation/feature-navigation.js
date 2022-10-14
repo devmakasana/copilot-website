@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { StatefulPopover } from "baseui/popover";
+import { useRouter } from "next/router";
 import { Container } from "../../styles/commonStyles";
+import useMobileDevice from "../../hooks/useMobileDevice";
 import {
   FeatureNavBlock,
   FeatureNavLink,
@@ -10,9 +13,6 @@ import {
   DropDwonLink,
   FcDropdownSpan,
 } from "./styles";
-import { StatefulPopover } from "baseui/popover";
-import { useRouter } from "next/router";
-import useMobileDevice from "../../hooks/useMobileDevice";
 
 export default function FeatureNavigation() {
   const route = useRouter();
@@ -190,11 +190,11 @@ export default function FeatureNavigation() {
           {mobile ? (
             <>
               <FeatureNavLink>
-              <Link href="/features/deal-pipeline">
+                <Link href="/features/deal-pipeline">
                   <a
-                   className={
-                    route.pathname === "/features/deal-pipeline" && "active"
-                  }
+                    className={
+                      route.pathname === "/features/deal-pipeline" && "active"
+                    }
                   >
                     <Image
                       src="/images/Deal-Icon.svg"
@@ -208,14 +208,15 @@ export default function FeatureNavigation() {
                 </Link>
               </FeatureNavLink>
               <FeatureNavLink>
-              <Link href="/features/activities-goals">
+                <Link href="/features/activities-goals">
                   <a
                     className={
-                        route.pathname === "/features/activities-goals" && "active"
-                      }
+                      route.pathname === "/features/activities-goals" &&
+                      "active"
+                    }
                   >
                     <Image
-                       src="/images/Goal-Icon.svg"
+                      src="/images/Goal-Icon.svg"
                       loading="lazy"
                       width="24"
                       height="24"
@@ -226,11 +227,11 @@ export default function FeatureNavigation() {
                 </Link>
               </FeatureNavLink>
               <FeatureNavLink>
-              <Link href="/features/integration">
+                <Link href="/features/integration">
                   <a
-                     className={
-                        route.pathname === "/features/integration" && "active"
-                      }
+                    className={
+                      route.pathname === "/features/integration" && "active"
+                    }
                   >
                     <Image
                       src="/images/Integratio-Icon.svg"

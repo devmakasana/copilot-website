@@ -2,7 +2,7 @@ import Layout from "/components/layout";
 import { useMemo } from "react";
 import moment from "moment";
 import Navbar from "../../components/navbar/navbar";
-import { getAllUpdates } from "../../lib/contentful-updates";
+// import { getAllUpdates } from "../../lib/contentful-updates";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,7 +38,9 @@ export default function Updates({ allPosts }) {
             <UpdateHeader>
               <TagList>
                 {item?.tags?.map((item, index) => {
-                  return <TagItem>{item}</TagItem>;
+                  return (
+                    <TagItem key={`taglist_index_${index}`}>{item}</TagItem>
+                  );
                 })}
               </TagList>
               <PublishSpan>
@@ -80,18 +82,16 @@ export default function Updates({ allPosts }) {
         <ScHeroSection>
           <LinearBg className="feature" />
           <Container>
-            <ScFeatureHeading>What's new</ScFeatureHeading>
+            <ScFeatureHeading>What is new</ScFeatureHeading>
             <ScFeaturePara>
               A rundown of the latest copilot features, product enhancements,
               design updates, and bug fixes.
             </ScFeaturePara>
             <LinkBlock>
               <Link href="">
-                {" "}
                 <a target="_blank">Subscribe to updates</a>
               </Link>
               <Link href="">
-                {" "}
                 <a target="_blank">Follow us on Twitter</a>
               </Link>
             </LinkBlock>
@@ -103,7 +103,8 @@ export default function Updates({ allPosts }) {
   );
 }
 export async function getStaticProps({ preview = false }) {
-  const allPosts = (await getAllUpdates(preview)) ?? [];
+  // const allPosts = (await getAllUpdates(preview)) ?? [];
+  const allPosts = [];
   return {
     props: { preview, allPosts },
   };
