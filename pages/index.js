@@ -169,7 +169,7 @@ export default function NewIndex() {
               <TabRow>
                 <TabBox>
                   <Link href={"#"}>
-                    <a>Messaging</a>
+                    <a className="activetab">Messaging</a>
                   </Link>
                 </TabBox>
                 <TabBox>

@@ -445,6 +445,10 @@ const TabRow = styled.div`
   display: flex;
 `;
 const TabBox = styled.div`
+  .activetab {
+    background-color: #f4d8c4;
+    color: ${({ theme }) => theme.colors.black};
+  }
   a {
     ${Label};
     color: ${({ theme }) => theme.colors.lightgray};
