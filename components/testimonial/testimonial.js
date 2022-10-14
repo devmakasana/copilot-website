@@ -95,7 +95,7 @@ export default function Testimonial() {
                   <ContentUpper>
                     <p>
                       This has a lot of features that you would want in a CRM.
-                      There is so much value in the fact that you don't have to
+                      There is so much value in the fact that you do not have to
                       be married to a telephony service. When you click to call
                       it will give the option to call with the existing soft
                       phone on your computer.
@@ -103,7 +103,7 @@ export default function Testimonial() {
                     <p>
                       Simple, minimal, clean. I was up and running in minutes
                       with 7 team members in less than 10 minutes. Transparent
-                      product RoadMap, it's good to be a part of the journey.
+                      product RoadMap, it is good to be a part of the journey.
                       They have a long way to go.
                     </p>
                   </ContentUpper>
@@ -127,8 +127,8 @@ export default function Testimonial() {
                 <SliderContent>
                   <ContentUpper>
                     <p>
-                      “I was a bit skeptical at first, but I'm pleasantly
-                      surprised by how easy and also powerful copilot is. It's
+                      “I was a bit skeptical at first, but I am pleasantly
+                      surprised by how easy and also powerful copilot is. It is
                       great for creating your customer lists, creating, tracking
                       and managing deals, following the pipeline, and messaging
                       leads. It has all features of a premium crm.

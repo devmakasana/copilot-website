@@ -82,18 +82,16 @@ export default function Updates({ allPosts }) {
         <ScHeroSection>
           <LinearBg className="feature" />
           <Container>
-            <ScFeatureHeading>What's new</ScFeatureHeading>
+            <ScFeatureHeading>What is new</ScFeatureHeading>
             <ScFeaturePara>
               A rundown of the latest copilot features, product enhancements,
               design updates, and bug fixes.
             </ScFeaturePara>
             <LinkBlock>
               <Link href="">
-                {" "}
                 <a target="_blank">Subscribe to updates</a>
               </Link>
               <Link href="">
-                {" "}
                 <a target="_blank">Follow us on Twitter</a>
               </Link>
             </LinkBlock>
