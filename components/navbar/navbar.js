@@ -82,31 +82,24 @@ export default function Navbar({ BlogDetails }) {
         >
           <NavigationBlock>
             <SpanLink
-              className={router.pathname === "/pricing" ? "active" : ""}
+              className={router.pathname === "/features" ? "active" : ""}
             >
-              <Link href="/pricing">
-                <a>Why Copilot </a>
+              <Link href="/features">
+                <a>Pricing</a>
               </Link>
             </SpanLink>
             <SpanLink
               className={router.pathname === "/features" ? "active" : ""}
             >
               <Link href="/features">
-                <a>Pricing </a>
+                <a>Features</a>
               </Link>
             </SpanLink>
             <SpanLink
               className={router.pathname === "/features" ? "active" : ""}
             >
               <Link href="/features">
-                <a>Features </a>
-              </Link>
-            </SpanLink>
-            <SpanLink
-              className={router.pathname === "/features" ? "active" : ""}
-            >
-              <Link href="/features">
-                <a>Solutions </a>
+                <a>Extensions</a>
               </Link>
             </SpanLink>
             <SpanLink

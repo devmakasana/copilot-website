@@ -14,13 +14,10 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
   transition: all 300ms ease-in-out;
   ${(props) =>
     props.isScrollPage &&
     css`
-      height: 64px;
       background: rgba(250, 250, 251, 0.75);
       backdrop-filter: blur(32px);
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
