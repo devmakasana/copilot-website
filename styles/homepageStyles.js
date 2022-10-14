@@ -8,7 +8,6 @@ import {
   Heading1,
   Heading3,
   Heading4,
-  Body1,
   Body2,
 } from "./styles";
 
