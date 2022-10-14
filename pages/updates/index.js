@@ -2,7 +2,7 @@ import Layout from "/components/layout";
 import { useMemo } from "react";
 import moment from "moment";
 import Navbar from "../../components/navbar/navbar";
-import { getAllUpdates } from "../../lib/contentful-updates";
+// import { getAllUpdates } from "../../lib/contentful-updates";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import Image from "next/image";
 import Link from "next/link";
@@ -105,7 +105,8 @@ export default function Updates({ allPosts }) {
   );
 }
 export async function getStaticProps({ preview = false }) {
-  const allPosts = (await getAllUpdates(preview)) ?? [];
+  // const allPosts = (await getAllUpdates(preview)) ?? [];
+  const allPosts = [];
   return {
     props: { preview, allPosts },
   };
