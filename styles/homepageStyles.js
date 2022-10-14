@@ -1,12 +1,14 @@
 import styled, { css } from "styled-components";
 import {
   Body1,
+  Body3,
+  Body4,
+  Body5,
   Caption,
-  HeaderFont,
   Heading1,
   Heading3,
-  Text1,
-  Text2,
+  Heading4,
+  Body2,
 } from "./styles";
 
 const Scfeaturetitle = styled.div`
@@ -23,7 +25,7 @@ const FeatureTag = styled.div`
   border-radius: 26px;
   background-color: ${({ theme }) => theme.colors.lightBg};
   span {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.manatee};
   }
 `;
@@ -67,7 +69,7 @@ const LearnMoreLink = styled.div`
   opacity: 0;
   transition: all 300ms;
   span {
-    ${Text2};
+    ${Body2};
     font-family: ${({ theme }) => theme.fontfamily.Gtwalsheimpro};
     margin: 0 6px 0 0;
     color: ${({ theme }) => theme.colors.primary};
@@ -88,7 +90,7 @@ const FeatureImg = styled.div`
 `;
 const FeatureCardTitle = styled.h3`
   margin: 16px 0 0 0;
-  ${Text2}
+  ${Body2}
   text-align: center;
   color: ${({ theme }) => theme.colors.textColor};
   transition: all 300ms;
@@ -217,7 +219,7 @@ const Para = styled.p`
   color: ${({ theme }) => theme.colors.title};
   @media only screen and (max-width: 991px) {
     text-align: center;
-    ${Text1}
+    ${Body1}
   }
 `;
 
@@ -393,6 +395,256 @@ const ReviewRight = styled.div`
     color: ${({ theme }) => theme.colors.caption};
   }
 `;
+const BusinessSection = styled.div``;
+const BusinessText = styled.div`
+  max-width: 975px;
+  width: 100%;
+  padding-bottom: 50px;
+  h2 {
+    ${Heading3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.title};
+    padding-bottom: 20px;
+  }
+  p {
+    ${Body3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+    letter-spacing: 0.02em;
+    padding-bottom: 32px;
+    max-width: 852px;
+    width: 100%;
+  }
+`;
+const Functionality = styled.div`
+  padding: 120px 0;
+`;
+const TopFunctionWrap = styled.div`
+  width: 100%;
+  max-width: 918px;
+  h3 {
+    margin: 0 0 20px 0;
+    ${Heading3};
+    color: ${({ theme }) => theme.colors.title};
+  }
+  p {
+    ${Body3};
+    color: ${({ theme }) => theme.colors.body};
+    margin: 0;
+  }
+`;
+const BottomFunction = styled.div`
+  margin-top: 40px;
+`;
+const TabRow = styled.div`
+  display: flex;
+  margin-left: -20px;
+`;
+const TabBox = styled.div`
+  display: flex;
+  margin: 0 20px;
+`;
+const TabName = styled.span`
+  display: block;
+  margin-left: 12px;
+  ${Body4};
+  color: ${({ theme }) => theme.colors.body};
+`;
+const LeftB = styled.div`
+  border-top: 1px solid #00160e;
+  border-left: 1px solid #00160e;
+  border-bottom: 1px solid #00160e;
+  width: 10px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+`;
+const RightB = styled.div`
+  border-top: 1px solid #00160e;
+  border-right: 1px solid #00160e;
+  border-bottom: 1px solid #00160e;
+  width: 10px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+`;
+const CenterBox = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+`;
+const ContainWrap = styled.div`
+  margin-top: 32px;
+  display: flex;
+  width: 100%;
+`;
+const LeftDetail = styled.div`
+  width: 100%;
+  max-width: 278px;
+  margin-right: 28px;
+  h4 {
+    margin: 0 0 16px 0;
+    ${Heading4};
+    color: ${({ theme }) => theme.colors.title};
+  }
+  p {
+    ${Body4};
+    letter-spacing: 0.02em;
+    color: ${({ theme }) => theme.colors.body};
+    margin: 0 0 28px 0;
+  }
+`;
+const RightDetail = styled.div`
+  border: 1px solid #000000;
+  border-radius: 5px;
+  padding: 18px 18px 13px;
+  width: 100%;
+`;
+const Extension = styled.div``;
+const AutomateSection = styled.div`
+  padding: 120px 0;
+`;
+const AutomateText = styled.div`
+  max-width: 975px;
+  width: 100%;
+  margin-bottom: 50px;
+  h2 {
+    ${Heading3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.title};
+    padding-bottom: 20px;
+  }
+  p {
+    ${Body3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+    letter-spacing: 0.02em;
+    max-width: 933px;
+    width: 100%;
+    span {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+`;
+const BottomList = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 0 -31.5px;
+  position: relative;
+`;
+const CardWrapper = styled.div`
+  width: 100%;
+  max-width: 33.33%;
+  padding: 0 31.5px;
+  :last-child {
+    padding-right: 0;
+  }
+`;
+const CardItem = styled.div`
+  background: #ffffff;
+  border: 1px solid #212b36;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  .hr-icon {
+    transform: translate(0, -50%);
+    right: -68px;
+  }
+`;
+const CardTextView = styled.div`
+  margin-left: 15px;
+  h5 {
+    margin: 0 0 4px 0;
+    ${Body4};
+    color: ${({ theme }) => theme.colors.title};
+    letter-spacing: 0.02em;
+  }
+  span {
+    display: block;
+    ${Body5};
+    color: ${({ theme }) => theme.colors.body};
+    letter-spacing: 0.02em;
+  }
+`;
+const IconView = styled.div`
+  position: absolute;
+  right: 10px;
+  top: -11px;
+  display: inline-flex;
+`;
+const IconWithoutView = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: #e9e9ea;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  top: -11px;
+`;
+const LineIcon = styled.div`
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, 0);
+`;
+const HelpSection = styled.div`
+  padding-top: 82px;
+  padding-bottom: 120px;
+`;
+
+const HelpMain = styled.div`
+  display: flex;
+  border: 1.5px solid #000000;
+  background-color: ${({ theme }) => theme.colors.whitecolor};
+  image {
+    border-radius: 0px 4px 4px 0px;
+  }
+`;
+const HelpLeft = styled.div`
+  padding: 60px;
+  max-width: 777px;
+  width: 100%;
+  h3 {
+    max-width: 553px;
+    width: 100%;
+    ${Heading3};
+    color: ${({ theme }) => theme.colors.title};
+    margin: 0 0 42px 0;
+  }
+`;
+const HelpLeftSub = styled.div`
+  /* max-width: 315px;
+  width: 100%; */
+  h4 {
+    ${Heading4};
+    color: ${({ theme }) => theme.colors.title};
+    margin: 0 0 12px 0;
+  }
+  p {
+    ${Body4};
+    margin: 0 0 20px 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+  }
+`;
+const HelpLink = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  a {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+const HelpWrap = styled.div`
+  display: flex;
+  gap: 27px;
+`;
+const HelpMargin = styled.div`
+  margin-top: 67px;
+`;
+
 export {
   Scfeaturetitle,
   FeatureTag,
@@ -425,4 +677,35 @@ export {
   ReviewLogo,
   Reviewimage,
   ReviewRight,
+  BusinessSection,
+  BusinessText,
+  Functionality,
+  TopFunctionWrap,
+  BottomFunction,
+  TabRow,
+  TabBox,
+  TabName,
+  LeftB,
+  RightB,
+  CenterBox,
+  ContainWrap,
+  LeftDetail,
+  RightDetail,
+  Extension,
+  AutomateSection,
+  AutomateText,
+  BottomList,
+  CardWrapper,
+  CardItem,
+  CardTextView,
+  IconView,
+  IconWithoutView,
+  LineIcon,
+  HelpSection,
+  HelpMain,
+  HelpLeft,
+  HelpLeftSub,
+  HelpLink,
+  HelpWrap,
+  HelpMargin,
 };

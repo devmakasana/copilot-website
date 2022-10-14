@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { HeaderFont, Text2 } from "../../styles/styles";
+import { HeaderFont, Body2 } from "../../styles/styles";
 
 const NavbarWrapper = styled.div`
   position: fixed;
@@ -178,7 +178,7 @@ const DropDownToggle = styled.div`
 const DropdownSpan = styled.span`
   margin-right: 4px;
   color: ${({ theme }) => theme.colors.textColor};
-  ${Text2}
+  ${Body2}
   @media only screen and (max-width: 768px) {
     width: 100%;
     font-size: 13px;
@@ -260,7 +260,7 @@ const DropDownLink = styled.span`
       }
     }
     a {
-      ${Text2}
+      ${Body2}
       padding: 8px 12px;
     }
   }

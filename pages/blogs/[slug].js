@@ -2,13 +2,22 @@
 
 import { useRouter } from "next/router";
 import Layout from "/components/layout";
-import PageNotFound from "../404";
-import moment from "moment";
 import { NextSeo } from "next-seo";
-import React, { useState, useCallback, useMemo, useEffect } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import Image from "next/image";
 import Link from "next/link";
+
+import slugify from "slugify";
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "next-share";
+import copy from "copy-to-clipboard";
+import Scrollspy from "react-scrollspy";
+import PageNotFound from "../404";
 import Navbar from "../../components/navbar/navbar";
 import Productivity from "../../components/productivity/productivity";
 import Testimonial from "../../components/testimonial/testimonial";
@@ -30,38 +39,17 @@ import {
   ImageBlock,
   TableContent,
   TableContentItem,
-  TableContentList,
 } from "../../styles/blogStyles";
-import Image from "next/image";
 import {
   BlogBreadCum,
   BreadCumLink,
   Container,
-  FcfeatureBlock,
   LinearBg,
   RichTextBlock,
   ScMainBlock,
   SlashBlock,
 } from "../../styles/commonStyles";
-import slugify from "slugify";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-} from "next-share";
-import copy from "copy-to-clipboard";
-import Scrollspy from "react-scrollspy";
 
-const customMarkdownOptions = (content) => ({
-  renderNode: {
-    [BLOCKS.EMBEDDED_ASSET]: (node) => (
-      <RichTextAsset
-        id={node.data.target.sys.id}
-        assets={content.links.assets.block}
-      />
-    ),
-  },
-});
 const CURRENT_PAGE_URL = global.window?.location?.href;
 
 export default function BlogDetails({ blogPost: post }) {
@@ -94,6 +82,22 @@ export default function BlogDetails({ blogPost: post }) {
     },
     [templateClass, setTemplateClass]
   );
+  const tableContents = useMemo(() => {
+    const newList = [];
+    post?.body?.json?.content?.forEach((item) => {
+      if (item?.nodeType === "heading-2" && item?.content?.[0]?.value) {
+        newList?.push(item?.content?.[0]?.value);
+      }
+    });
+    if (newList.length === 0) {
+      post?.body?.json?.content?.forEach((item) => {
+        if (item?.nodeType === "heading-3" && item?.content?.[0]?.value) {
+          newList?.push(item?.content?.[0]?.value);
+        }
+      });
+    }
+    return newList;
+  }, [post?.body?.json?.content]);
 
   const options = {
     renderNode: {
@@ -114,33 +118,6 @@ export default function BlogDetails({ blogPost: post }) {
       },
     },
   };
-
-  const router = useRouter();
-  if (!router.isFallback && !post) {
-    return <ErrorPage statusCode={404} />;
-  }
-
-  const tableContents = useMemo(() => {
-    const newList = [];
-    post?.body?.json?.content?.map((item) => {
-      if (item?.nodeType === "heading-2" && item?.content?.[0]?.value) {
-        newList?.push(item?.content?.[0]?.value);
-      }
-    });
-    if (newList.length === 0) {
-      post?.body?.json?.content?.map((item) => {
-        if (item?.nodeType === "heading-3" && item?.content?.[0]?.value) {
-          newList?.push(item?.content?.[0]?.value);
-        }
-      });
-    }
-    return newList;
-  }, [post?.body?.json?.content]);
-
-  const onCopyToClipboard = () => {
-    copy(CURRENT_PAGE_URL);
-  };
-
   const tableContentListView = useMemo(() => {
     return tableContents?.map((item, index) => {
       const indexOfTemplateClass = templateClass?.findIndex(
@@ -182,6 +159,16 @@ export default function BlogDetails({ blogPost: post }) {
       </Scrollspy>
     );
   }, [tableContents, onClickTableItem, tableContentListView]);
+
+  const router = useRouter();
+  if (!router.isFallback && !post) {
+    return null;
+    // return <ErrorPage statusCode={404} />;
+  }
+
+  const onCopyToClipboard = () => {
+    copy(CURRENT_PAGE_URL);
+  };
 
   return (
     <>

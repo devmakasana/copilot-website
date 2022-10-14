@@ -1,5 +1,3 @@
-import Layout from "../components/layout";
-import Navbar from "../components/navbar/navbar";
 import { NextSeo } from "next-seo";
 import Image from "next/image";
 import Link from "next/link";

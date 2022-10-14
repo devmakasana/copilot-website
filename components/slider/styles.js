@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Heading1, Heading3, Text1, Text2 } from "../../styles/styles";
+import { Heading1, Heading3, Body1, Body2 } from "../../styles/styles";
 
 const SliderMain = styled.div`
   width: 100%;
@@ -323,7 +323,7 @@ const SliderTag = styled.div`
   border-radius: 24px;
   display: inline-flex;
   span {
-    ${Text1}
+    ${Body1}
     color: ${({ theme }) => theme.colors.whiteColor};
   }
 `;
@@ -347,7 +347,7 @@ const SliderContentHeading = styled.h2`
 `;
 const SliderContentSpan = styled.span`
   display: block;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.lightGray};
 `;
 const SliderContentList = styled.ul`
@@ -358,7 +358,7 @@ const SliderContentList = styled.ul`
 const SliderContentListItem = styled.li`
   margin: 0 0 16px 0;
   padding: 0 0 0 40px;
-  ${Text1}
+  ${Body1}
   color: ${({ theme }) => theme.colors.whiteColor};
   background-image: url("/images/icon-check.svg");
   background-repeat: no-repeat;

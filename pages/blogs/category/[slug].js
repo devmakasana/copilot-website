@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
+import { NextSeo } from "next-seo";
 import Layout from "../../../components/layout";
 import Navbar from "../../../components/navbar/navbar";
 import {
@@ -9,7 +10,6 @@ import {
 } from "../../../lib/contentful-blogs";
 import {
   BlogHeroHeading,
-  BlogWrap,
   CategoryWrap,
   CategoryWrapper,
 } from "../../../styles/blogStyles";
@@ -26,7 +26,6 @@ import {
   PublishDate,
   ScHeroSection,
 } from "../../../styles/commonStyles";
-import { NextSeo } from "next-seo";
 
 export default function BlogCategory({
   preview,
@@ -110,12 +109,12 @@ export async function getStaticProps({ params, preview = false }) {
   )?.name;
 
   const currentPage = 1;
-  const perPage = 9;
-  var nextPage = (currentPage + 1).toString();
-  const allPosts = allPostsOfSlug?.slice(
-    (currentPage - 1) * perPage,
-    (currentPage - 1) * perPage + perPage
-  );
+  // const perPage = 9;
+  // var nextPage = (currentPage + 1).toString();
+  // const allPosts = allPostsOfSlug?.slice(
+  //   (currentPage - 1) * perPage,
+  //   (currentPage - 1) * perPage + perPage
+  // );
   return {
     props: { preview, title, allPostsOfSlug, currentPage },
   };

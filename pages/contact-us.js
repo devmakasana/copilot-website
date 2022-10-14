@@ -92,11 +92,11 @@ export default function ContactUs() {
             <ContactBlock>
               <ContactLeft>
                 <ContactHeading>
-                  Have Project to discuss? Let's Connect.
+                  Have Project to discuss? Lets Connect.
                 </ContactHeading>
                 <ContactPara>
                   Any Questions or Comments? Interested in a demo? Send us a
-                  message, and we'll get back to you within 24 hours.
+                  message, and we all get back to you within 24 hours.
                 </ContactPara>
                 <ContactLinkBlock>
                   <ContactDetails>

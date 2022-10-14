@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Heading3, Text2 } from "../../styles/styles";
+import { Heading3, Body2 } from "../../styles/styles";
 
 const PricingTable = styled.div``;
 const PricingTableTitle = styled.div`
@@ -206,7 +206,7 @@ const PricingContentName = styled.div`
   align-items: center;
   p {
     margin: 0;
-    ${Text2}
+    ${Body2}
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.Onyx};
   }
@@ -228,7 +228,7 @@ const PricingInnertext = styled.div`
     }
     margin: 0;
     text-align: center;
-    ${Text2}
+    ${Body2}
     text-transform: capitalize;
     color: ${({ theme }) => theme.colors.textColor};
     ${(props) =>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading1, HeroPara, Text3 } from "../../styles/styles";
+import { Heading1, HeroPara, Body3 } from "../../styles/styles";
 
 const SolutionHeroWrap = styled.div`
   position: relative;
@@ -105,7 +105,7 @@ const AnnounceListItem = styled.li`
     margin: 0;
   }
   span {
-    ${Text3}
+    ${Body3}
     margin: 0 0 0 8px;
     color: ${({ theme }) => theme.colors.romanSilver};
   }
@@ -125,7 +125,7 @@ const SolutionLogos = styled.div`
 `;
 const LogoHeadText = styled.p`
   margin: 0;
-  ${Text3}
+  ${Body3}
   text-align: center;
   color: ${({ theme }) => theme.colors.romanSilver};
 `;

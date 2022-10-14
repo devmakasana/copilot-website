@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Heading2, Heading4, Text1, Text2 } from "./styles";
+import { Heading2, Heading4, Body1, Body2 } from "./styles";
 
 const ContactUsWrapper = styled.div`
   padding: 50px 0 0 0;
@@ -39,7 +39,7 @@ const ContactHeading = styled.h2`
 `;
 const ContactPara = styled.p`
   margin: 0;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
 `;
 const ContactLinkBlock = styled.div`
@@ -65,7 +65,7 @@ const LinkHeading = styled.h3`
 const Linkdiv = styled.div`
   margin-top: 4px;
   a {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
     transition: all 300ms;
     :hover {
@@ -121,7 +121,7 @@ const Input = styled.input`
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.textColor};
   :focus {
     outline: none;
@@ -129,7 +129,7 @@ const Input = styled.input`
     box-shadow: var(--inputBoxShadow);
   }
   ::placeholder {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
 `;
@@ -139,7 +139,7 @@ const TextArea = styled.textarea`
   border: 1px solid ${({ theme }) => theme.colors.borderColor};
   border-radius: 5px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.textColor};
   resize: none;
   :focus {
@@ -148,7 +148,7 @@ const TextArea = styled.textarea`
     box-shadow: var(--inputBoxShadow);
   }
   ::placeholder {
-    ${Text2}
+    ${Body2}
     color: ${({ theme }) => theme.colors.romanSilver};
   }
   &.height96 {
@@ -173,7 +173,7 @@ const SuccessWrap = styled.div`
     color: ${({ theme }) => theme.colors.darkColor};
   }
   p {
-    ${Text1}
+    ${Body1}
     margin: 0;
     text-align: center;
     font-weight: 400;

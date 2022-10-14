@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Text3 } from "../../styles/styles";
+import { Body3 } from "../../styles/styles";
 
 const FeatureNavBlock = styled.div`
   max-width: 1074px;
@@ -15,7 +15,7 @@ const FeatureNavBlock = styled.div`
 `;
 const FeatureSpan = styled.span`
   display: block;
-  ${Text3}
+  ${Body3}
   text-align: center;
   margin-top: 15px;
   color: ${({ theme }) => theme.colors.textColor};
@@ -41,7 +41,7 @@ const FeatureNavLink = styled.div`
     }
   }
   @media only screen and (max-width: 479px) {
-      margin: 4px;
+    margin: 4px;
   }
 `;
 const MoreMenu = styled.div`
@@ -66,7 +66,7 @@ const DropDownList = styled.div`
   height: auto;
 `;
 const FcDropdownSpan = styled.div`
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.lightDark};
   font-weight: 500;
   margin-left: 12px;

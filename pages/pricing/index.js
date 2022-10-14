@@ -1,9 +1,9 @@
 // TODO: switch is not working
 
+import { NextSeo } from "next-seo";
 import Layout from "../../components/layout";
 import Navbar from "../../components/navbar/navbar";
 import Productivity from "../../components/productivity/productivity";
-import { NextSeo } from "next-seo";
 import DesktopPricing from "../../components/desktoppricing/desktoppricing";
 import { LinearBg, PricingMainBlock } from "../../styles/commonStyles";
 import useMobileDevice from "../../hooks/useMobileDevice";

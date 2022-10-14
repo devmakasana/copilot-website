@@ -136,6 +136,16 @@ const Caption = css`
   font-size: 12px;
   line-height: 24px;
 `;
+const Heading = css`
+  font-weight: 400;
+  font-size: 120px;
+  line-height: 120px;
+`;
+const HeroPara = css`
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 20px;
+`;
 
 export {
   Heading1,
@@ -155,4 +165,6 @@ export {
   ButtonText,
   Label,
   Caption,
+  Heading,
+  HeroPara,
 };

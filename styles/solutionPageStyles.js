@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ScFeatureBlock } from "./featureStyles";
-import { Heading2, Heading3, Heading6, Text2, Text3 } from "./styles";
+import { Heading2, Heading3, Heading6, Body2, Body3 } from "./styles";
 
 const SolutionSubHeading = styled.h2`
   max-width: 960px;
@@ -44,7 +44,7 @@ const CrmSubHeading = styled.h3`
 `;
 const CrmPara = styled.p`
   margin: 0;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
   &.MB10 {
     margin: 0 0 10px 0;
@@ -59,7 +59,7 @@ const SolutionList = styled.ul`
   margin: 0;
 `;
 const SolutionListItem = styled.li`
-  ${Text3}
+  ${Body3}
   color: ${({ theme }) => theme.colors.textColor};
   margin-bottom: 12px;
   padding-left: 25px;
@@ -120,7 +120,7 @@ const TabMenu = styled.div`
     margin: 0 11px 0 0;
     padding: 8px 16px;
     span {
-      ${Text3}
+      ${Body3}
     }
   }
 `;
@@ -160,7 +160,7 @@ const TabPara = styled.p`
   width: 100%;
   margin: auto;
   text-align: center;
-  ${Text2}
+  ${Body2}
   color: ${({ theme }) => theme.colors.romanSilver};
 `;
 const TabBottomContent = styled.div``;

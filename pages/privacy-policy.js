@@ -1,6 +1,6 @@
+import { NextSeo } from "next-seo";
 import Layout from "../components/layout";
 import Navbar from "../components/navbar/navbar";
-import { NextSeo } from "next-seo";
 import {
   Container,
   LinearBg,

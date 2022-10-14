@@ -1,11 +1,11 @@
+import Link from "next/link";
 import {
   Container,
   FcfeatureWrap,
   PrimaryButton,
   SecondryButton,
 } from "../../styles/commonStyles";
-import { SectionHeading, CtaInner, CtaLeft, CtaRight, CtaPara } from "./styles";
-import Link from "next/link";
+import { CtaInner, CtaBtn } from "./styles";
 
 export default function CTA() {
   return (
@@ -13,27 +13,21 @@ export default function CTA() {
       <FcfeatureWrap>
         <Container>
           <CtaInner>
-            <CtaLeft>
-              <SectionHeading>
-                Are sales hectic? <br /> Make it easier with copilot
-              </SectionHeading>
-              <CtaPara>
-                copilot helps you improve your customer service, make more sales
-                and increase customer loyalty
-              </CtaPara>
-            </CtaLeft>
-            <CtaRight>
+            <h2>
+              Start, run, and grow <span>your business</span>
+            </h2>
+            <CtaBtn>
               <PrimaryButton>
                 <Link href="/">
-                  <a>Get Started for Free</a>
+                  <a>Start Trial</a>
                 </Link>
               </PrimaryButton>
               <SecondryButton>
                 <Link href="/request-demo">
-                  <a>Request a Demo</a>
+                  <a>Book Demo</a>
                 </Link>
               </SecondryButton>
-            </CtaRight>
+            </CtaBtn>
           </CtaInner>
         </Container>
       </FcfeatureWrap>
