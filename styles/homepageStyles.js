@@ -9,6 +9,7 @@ import {
   Heading3,
   Heading4,
   Body2,
+  Label,
 } from "./styles";
 
 const Scfeaturetitle = styled.div`
