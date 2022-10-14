@@ -72,8 +72,10 @@ const PricingMainBlock = styled.div`
 `;
 
 const FcfeatureWrap = styled.div`
-  padding: 120px 0;
-  overflow: hidden;
+  padding: 60px 0;
+  background-color: ${({ theme }) => theme.colors.black};
+
+  /* overflow: hidden;
   &.dnone {
     display: none;
   }
@@ -82,7 +84,7 @@ const FcfeatureWrap = styled.div`
   }
   @media only screen and (max-width: 749px) {
     padding: 60px 0;
-  }
+  } */
 `;
 
 const SolutionTopSection = styled.div`

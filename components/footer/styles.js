@@ -1,10 +1,21 @@
 import styled, { css } from "styled-components";
-import { Heading2, Text1, Text2, Text3 } from "../../styles/styles";
+import {
+  Body4,
+  FooterText,
+  Heading2,
+  Text1,
+  Text2,
+  Text3,
+} from "../../styles/styles";
 
 const FooterSection = styled.div`
-  background-color: ${({ theme }) => theme.colors.darkBlue};
+  background-color: ${({ theme }) => theme.colors.neutral};
+  padding: 60px 0;
 `;
-const FooterInnerBlock = styled.div``;
+const FooterInnerBlock = styled.div`
+  display: flex;
+  gap: 36px;
+`;
 const FooterTitleBlock = styled.div`
   padding: 64px 0;
   display: flex;
@@ -105,6 +116,19 @@ const FooterLinkItem = styled.li`
     }
   }
 `;
+const FooterMenu = styled.ul`
+  margin: 0;
+  :last-child {
+    /* padding-top: 40px; */
+  }
+  list-style: none;
+  p {
+    ${FooterText};
+    color: ${({ theme }) => theme.colors.title};
+    margin: 0;
+    padding-bottom: 10px;
+  }
+`;
 const FooterLastBlock = styled.div`
   padding: 48px 0;
   display: flex;
@@ -123,15 +147,11 @@ const CopyRightText = styled.p`
 `;
 const FooterSocialList = styled.ul`
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   align-items: center;
+  gap: 24px;
 `;
 const FooterSocialItem = styled.li`
-  margin-bottom: 0;
-  display: flex;
-  margin-right: 12px;
   a {
     display: inline-block;
     overflow: hidden;
@@ -152,6 +172,11 @@ const FooterSocialItem = styled.li`
       }
     }
   }
+`;
+const FooterRight = styled.div`
+  display: flex;
+  gap: 16px;
+  width: 100%;
 `;
 const MobileFooterList = styled.ul`
   list-style: none;
@@ -176,7 +201,32 @@ const MobileFooterMain = styled.div`
     display: block;
   }
 `;
-
+const FooterFirst = styled.div`
+  max-width: 270px;
+  width: 100%;
+  p {
+    ${Body4};
+    letter-spacing: 0.02em;
+    color: ${({ theme }) => theme.colors.lightgray};
+    margin: 20px 0 24px 0;
+  }
+`;
+const FotterMenuLeft = styled.div`
+  max-width: 33.33%;
+  width: 100%;
+  .padding {
+    padding-top: 40px;
+  }
+`;
+const FooterMenuList = styled.li`
+  p {
+    ${FooterText};
+    color: ${({ theme }) => theme.colors.lightgray};
+    :last-child {
+      padding: 0;
+    }
+  }
+`;
 export {
   FooterSection,
   FooterInnerBlock,
@@ -195,4 +245,9 @@ export {
   MobileFooterListItem,
   MobileFooterMain,
   SectionHeading,
+  FooterFirst,
+  FooterRight,
+  FooterMenu,
+  FotterMenuLeft,
+  FooterMenuList,
 };

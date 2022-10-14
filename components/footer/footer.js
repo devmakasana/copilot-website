@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Container,
   PrimaryButton,
@@ -12,18 +13,16 @@ import {
   FooterTitleLeft,
   FooterTitleRight,
   FooterPara,
-  FooterLinkBlock,
-  FooterLinkList,
-  FooterLinkItem,
-  FooterLastBlock,
-  CopyRightText,
-  FooterSocialList,
-  FooterSocialItem,
   MobileFooterList,
   MobileFooterListItem,
-  MobileFooterMain,
+  FooterSocialItem,
+  FooterSocialList,
+  FooterFirst,
+  FooterRight,
+  FooterMenu,
+  FotterMenuLeft,
+  FooterMenuList,
 } from "./styles";
-import { Accordion, Panel } from "baseui/accordion";
 
 export default function Footer() {
   const solution = (
@@ -157,7 +156,121 @@ export default function Footer() {
       <FooterSection>
         <Container>
           <FooterInnerBlock>
-            <FooterTitleBlock>
+            <FooterFirst>
+              <Image
+                src="/images/blacklogo.svg"
+                alt="main-logo"
+                height={31}
+                width={143}
+              />
+              <p>The new standard for modern services business.</p>
+              <FooterSocialList>
+                <FooterSocialItem>
+                  <Image
+                    src="/images/twittersvg.svg"
+                    alt="main-logo"
+                    height={24}
+                    width={24}
+                  />
+                </FooterSocialItem>
+                <FooterSocialItem>
+                  <Image
+                    src="/images/facebook.svg"
+                    alt="main-logo"
+                    height={24}
+                    width={24}
+                  />
+                </FooterSocialItem>
+                <FooterSocialItem>
+                  <Image
+                    src="/images/linkedin.svg"
+                    alt="main-logo"
+                    height={24}
+                    width={24}
+                  />
+                </FooterSocialItem>
+                <FooterSocialItem>
+                  <Image
+                    src="/images/youtubesvg.svg"
+                    alt="main-logo"
+                    height={24}
+                    width={24}
+                  />
+                </FooterSocialItem>
+                <FooterSocialItem>
+                  <Image
+                    src="/images/instagramsvg.svg"
+                    alt="main-logo"
+                    height={24}
+                    width={24}
+                  />
+                </FooterSocialItem>
+              </FooterSocialList>
+            </FooterFirst>
+            <FooterRight>
+              <FotterMenuLeft>
+                <FooterMenu>
+                  <p>Features</p>
+                  <FooterMenuList>
+                    <p>Messaging</p>
+                    <p>Billing</p>
+                    <p>Files </p>
+                    <p>Forms</p>
+                    <p>Helpdesk</p>
+                    <p>Contracts</p>
+                    <p>Extensions</p>
+                  </FooterMenuList>
+                  <FooterMenu className="padding">
+                    <p>Platform</p>
+                    <FooterMenuList>
+                      <p>Automations</p>
+                      <p>Extensions</p>
+                    </FooterMenuList>
+                  </FooterMenu>
+                </FooterMenu>
+              </FotterMenuLeft>
+              <FotterMenuLeft>
+                <FooterMenu>
+                  <p>Use cases</p>
+                  <FooterMenuList>
+                    <p>Accounting & Financial Services</p>
+                    <p>Marketing & Creative</p>
+                    <p>Legal Services</p>
+                    <p>Startups & Tech-enabled services</p>
+                  </FooterMenuList>
+                  <FooterMenu className="padding">
+                    <p>Company</p>
+                    <FooterMenuList>
+                      <p>Pricing</p>
+                      <p>Enterprise</p>
+                      <p>Jobs</p>
+                    </FooterMenuList>
+                  </FooterMenu>
+                </FooterMenu>
+              </FotterMenuLeft>
+              <FotterMenuLeft>
+                <FooterMenu>
+                  <p>Resources</p>
+                  <FooterMenuList>
+                    <p>Blog</p>
+                    <p>API Reference</p>
+                    <p>Security</p>
+                    <p>What’s new</p>
+                    <p>Help center</p>
+                    <p>Video tutorials</p>
+                  </FooterMenuList>
+                  <FooterMenu className="padding">
+                    <p>Learn</p>
+                    <FooterMenuList>
+                      <p>Customizing your portal</p>
+                      <p>Customizing your portal</p>
+                      <p>Why you need a customer billing portal</p>
+                    </FooterMenuList>
+                  </FooterMenu>
+                </FooterMenu>
+              </FotterMenuLeft>
+            </FooterRight>
+            {/* <FooterTitleBlock>
               <FooterTitleLeft>
                 <SectionHeading>Try copilot for free</SectionHeading>
                 <FooterPara>
@@ -176,8 +289,8 @@ export default function Footer() {
                   </Link>
                 </SecondryButton>
               </FooterTitleRight>
-            </FooterTitleBlock>
-            <FooterLinkBlock>
+            </FooterTitleBlock> */}
+            {/* <FooterLinkBlock>
               <FooterLinkList>
                 <FooterLinkItem>
                   <h3>solution</h3>
@@ -426,6 +539,7 @@ export default function Footer() {
                 </FooterSocialItem>
               </FooterSocialList>
             </FooterLastBlock>
+          </FooterInnerBlock> */}
           </FooterInnerBlock>
         </Container>
       </FooterSection>

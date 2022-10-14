@@ -3,8 +3,8 @@ import {
   Body1,
   Body3,
   Body4,
+  Body5,
   Caption,
-  HeaderFont,
   Heading1,
   Heading3,
   Heading4,
@@ -500,6 +500,152 @@ const RightDetail = styled.div`
   width: 100%;
 `;
 const Extension = styled.div``;
+const AutomateSection = styled.div`
+  padding: 120px 0;
+`;
+const AutomateText = styled.div`
+  max-width: 975px;
+  width: 100%;
+  margin-bottom: 50px;
+  h2 {
+    ${Heading3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.title};
+    padding-bottom: 20px;
+  }
+  p {
+    ${Body3};
+    margin: 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+    letter-spacing: 0.02em;
+    max-width: 933px;
+    width: 100%;
+    span {
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
+`;
+const BottomList = styled.div`
+  width: 100%;
+  display: flex;
+  margin: 0 -31.5px;
+  position: relative;
+`;
+const CardWrapper = styled.div`
+  width: 100%;
+  max-width: 33.33%;
+  padding: 0 31.5px;
+  :last-child {
+    padding-right: 0;
+  }
+`;
+const CardItem = styled.div`
+  background: #ffffff;
+  border: 1px solid #212b36;
+  border-radius: 4px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  .hr-icon {
+    transform: translate(0, -50%);
+    right: -68px;
+  }
+`;
+const CardTextView = styled.div`
+  margin-left: 15px;
+  h5 {
+    margin: 0 0 4px 0;
+    ${Body4};
+    color: ${({ theme }) => theme.colors.title};
+    letter-spacing: 0.02em;
+  }
+  span {
+    display: block;
+    ${Body5};
+    color: ${({ theme }) => theme.colors.body};
+    letter-spacing: 0.02em;
+  }
+`;
+const IconView = styled.div`
+  position: absolute;
+  right: 10px;
+  top: -11px;
+  display: inline-flex;
+`;
+const IconWithoutView = styled.div`
+  width: 20px;
+  height: 20px;
+  background-color: #e9e9ea;
+  border-radius: 50px;
+  position: absolute;
+  right: 10px;
+  top: -11px;
+`;
+const LineIcon = styled.div`
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%, 0);
+`;
+const HelpSection = styled.div`
+  padding-top: 82px;
+  padding-bottom: 120px;
+`;
+
+const HelpMain = styled.div`
+  display: flex;
+  border: 1.5px solid #000000;
+  background-color: ${({ theme }) => theme.colors.whitecolor};
+  image {
+    border-radius: 0px 4px 4px 0px;
+  }
+`;
+const HelpLeft = styled.div`
+  padding: 60px;
+  max-width: 777px;
+  width: 100%;
+  h3 {
+    max-width: 553px;
+    width: 100%;
+    ${Heading3};
+    color: ${({ theme }) => theme.colors.title};
+    margin: 0 0 42px 0;
+  }
+`;
+const HelpLeftSub = styled.div`
+  /* max-width: 315px;
+  width: 100%; */
+  h4 {
+    ${Heading4};
+    color: ${({ theme }) => theme.colors.title};
+    margin: 0 0 12px 0;
+  }
+  p {
+    ${Body4};
+    margin: 0 0 20px 0;
+    color: ${({ theme }) => theme.colors.bodycolor};
+  }
+`;
+const HelpLink = styled.div`
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  a {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+const HelpWrap = styled.div`
+  display: flex;
+  gap: 27px;
+`;
+const HelpMargin = styled.div`
+  margin-top: 67px;
+`;
+
 export {
   Scfeaturetitle,
   FeatureTag,
@@ -547,4 +693,20 @@ export {
   LeftDetail,
   RightDetail,
   Extension,
+  AutomateSection,
+  AutomateText,
+  BottomList,
+  CardWrapper,
+  CardItem,
+  CardTextView,
+  IconView,
+  IconWithoutView,
+  LineIcon,
+  HelpSection,
+  HelpMain,
+  HelpLeft,
+  HelpLeftSub,
+  HelpLink,
+  HelpWrap,
+  HelpMargin,
 };

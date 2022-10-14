@@ -40,7 +40,7 @@ const theme = {
     primary: "#09AA6C",
     title: "#131313",
     body: "#424242",
-    lightgray: "#878787",
+    lightgray: "#757575",
     midiumgray: "#5B5B5B",
     black: "#000000",
     whiteColor: "#FFFFFF",

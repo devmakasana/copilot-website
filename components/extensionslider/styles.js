@@ -15,8 +15,14 @@ const Slide = styled.div`
 `;
 const SliderWrap = styled.div`
   overflow: hidden;
-  ::after {
-  }
+  position: relative;
+  ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    border-top: 1px dashed #000000;
 `;
 const WrapImage = styled.div`
   /* border: 1px solid black;
@@ -56,7 +62,7 @@ const SliderInner = styled.div`
   padding: 16px;
   border: 1px solid #000000;
   border-radius: 8px;
-  background-color: ${({ theme }) => theme.colors.whitecolor};
+  background-color: ${({ theme }) => theme.colors.whiteColor};
   max-width: 270px;
   width: 100%;
   margin: 0 12px;
