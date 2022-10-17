@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "../../styles/commonStyles";
 import {
   ProductivityMain,
@@ -15,7 +16,6 @@ import {
   LinearBg,
   SectionHeading,
 } from "./styles";
-import Image from "next/image";
 
 export default function Productivity() {
   return (

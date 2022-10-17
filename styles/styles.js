@@ -127,7 +127,7 @@ const ButtonText = css`
   line-height: 26px;
 `;
 const Label = css`
-  font-weight: 400;
+  font-weight: 500;
   font-size: 17px;
   line-height: 21px;
 `;
@@ -146,7 +146,11 @@ const HeroPara = css`
   font-size: 22px;
   line-height: 20px;
 `;
-
+const TableText = css`
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 44px;
+`;
 export {
   Heading1,
   Heading2,
@@ -167,4 +171,5 @@ export {
   Caption,
   Heading,
   HeroPara,
+  TableText,
 };
