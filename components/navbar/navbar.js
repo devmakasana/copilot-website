@@ -82,9 +82,9 @@ export default function Navbar({ BlogDetails }) {
         >
           <NavigationBlock>
             <SpanLink
-              className={router.pathname === "/features" ? "active" : ""}
+              className={router.pathname === "/pricing" ? "active" : ""}
             >
-              <Link href="/features">
+              <Link href="/pricing">
                 <a>Pricing</a>
               </Link>
             </SpanLink>
