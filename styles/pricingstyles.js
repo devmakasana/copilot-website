@@ -87,7 +87,7 @@ const LeftbottomBorder = styled.div`
   height: 6px;
 `;
 const WrapSlide = styled.div`
-  display: flex !important;
+  display: -webkit-inline-box;
   align-items: stretch;
   height: 100%;
 `;
@@ -116,19 +116,22 @@ const RightBorder = styled.div`
   border-top: 1px solid black;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
-  width: 30px;
+  width: 29px;
+
   display: block;
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
+  margin-left: -29px;
 `;
 const LeftBorder = styled.div`
   border-top: 1px solid black;
   border-left: 1px solid black;
   border-bottom: 1px solid black;
-  width: 30px;
+  width: 29px;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
   display: block;
+  margin-right: -29px;
 `;
 const PriceLeft = styled.div`
   padding: 40px 30px;
@@ -210,7 +213,7 @@ const PriceTable = styled.div`
     border-spacing: 0;
     .tableBorder {
       border: none;
-      background-color: ${({ theme }) => theme.colors.traspent};
+      background-color: transparent;
       width: 624px;
     }
     .tablecolor {
@@ -320,6 +323,13 @@ const PriceImageLeft = styled.div`
     ${Body3};
   }
 `;
+const Pricefaq = styled.div`
+  h3 {
+    ${Heading3};
+    color: ${({ theme }) => theme.colors.title};
+  }
+  margin: 0 0 60px 0;
+`;
 export {
   HeroHeading,
   HeroSection,
@@ -353,4 +363,5 @@ export {
   ImageWrap,
   PriceImage,
   PriceImageLeft,
+  Pricefaq,
 };

@@ -151,6 +151,16 @@ const TableText = css`
   font-size: 42px;
   line-height: 44px;
 `;
+const Value = css`
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+`;
+const CardTxt = css`
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+`;
 export {
   Heading1,
   Heading2,
@@ -172,4 +182,6 @@ export {
   Heading,
   HeroPara,
   TableText,
+  Value,
+  CardTxt,
 };

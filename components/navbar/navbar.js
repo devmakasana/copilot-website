@@ -89,16 +89,16 @@ export default function Navbar({ BlogDetails }) {
               </Link>
             </SpanLink>
             <SpanLink
-              className={router.pathname === "/features" ? "active" : ""}
+              className={router.pathname === "/modulebilling" ? "active" : ""}
             >
-              <Link href="/features">
+              <Link href="/modulebilling">
                 <a>Features</a>
               </Link>
             </SpanLink>
             <SpanLink
-              className={router.pathname === "/features" ? "active" : ""}
+              className={router.pathname === "/extensions" ? "active" : ""}
             >
-              <Link href="/features">
+              <Link href="/extensions">
                 <a>Extensions</a>
               </Link>
             </SpanLink>
