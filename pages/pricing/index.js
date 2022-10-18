@@ -42,6 +42,7 @@ import {
   ImageWrap,
   PriceImage,
   PriceImageLeft,
+  Pricefaq,
 } from "../../styles/pricingstyles";
 import CTA from "../../components/cta/cta";
 
@@ -1252,6 +1253,9 @@ export default function NewIndex() {
                 />
               </>
             </PriceImage>
+            <Pricefaq>
+              <h3>Frequently Asked Questions</h3>
+            </Pricefaq>
           </Container>
         </PricingSection>
         <CTA />
