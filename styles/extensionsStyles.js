@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
   Body1,
   Body4,
@@ -31,7 +31,7 @@ const HeroSection = styled.div`
   }
 `;
 const FeatureSection = styled.div`
-  padding: 120px 0;
+  /* padding: 120px 0; */
 `;
 const FeatureWrap = styled.div`
   display: flex;
@@ -39,13 +39,16 @@ const FeatureWrap = styled.div`
 `;
 const Input = styled.input`
   ${Value};
-  background-image: "/images/search1.svg";
+  background-image: url("/images/search1.svg");
+  background-repeat: no-repeat;
   color: ${({ theme }) => theme.colors.lightgray};
   letter-spacing: 0.01em;
-  padding: 12px 20px;
+  padding: 11px 20px 11px 56px;
   border: 1px solid #bebebf;
   border-radius: 48px;
   width: 306px;
+  background-position: 6% 50%;
+  outline: 0;
 `;
 const Catagory = styled.ul`
   padding-top: 49px;
@@ -67,15 +70,21 @@ const Catagoryitem = styled.li`
   a {
     ${Body4};
     letter-spacing: 0.02em;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.primary};
 
     margin: 0;
     :first-child {
-      color: ${({ theme }) => theme.colors.primary};
     }
   }
 `;
-const FeatureLeft = styled.div``;
+const FeatureLeft = styled.div`
+  position: relative;
+`;
+const MenuWrap = styled.div`
+  position: sticky;
+  padding-top: 120px;
+  top: 0;
+`;
 const FeatureRight = styled.div`
   h4 {
     ${Heading4};
@@ -128,7 +137,9 @@ const CardEnd = styled.div`
 const FeatureImg = styled.div`
   padding: 38px 16px;
 `;
-const Featured = styled.div``;
+const Featured = styled.div`
+  padding-top: 120px;
+`;
 const ExtensionsSection = styled.div`
   padding-top: 40px;
   p {
@@ -193,4 +204,5 @@ export {
   CardInfo,
   SchedulingApps,
   CardWrap,
+  MenuWrap,
 };

@@ -43,6 +43,11 @@ import {
   PriceImage,
   PriceImageLeft,
   Pricefaq,
+  Row,
+  Panel,
+  PanelHeading,
+  Colmd12,
+  PanelGroup,
 } from "../../styles/pricingstyles";
 import CTA from "../../components/cta/cta";
 
@@ -1255,6 +1260,103 @@ export default function NewIndex() {
             </PriceImage>
             <Pricefaq>
               <h3>Frequently Asked Questions</h3>
+              <Container>
+                <Row>
+                  <Colmd12>
+                    <PanelGroup
+                      id="accordion"
+                      role="tablist"
+                      aria-multiselectable="true"
+                    >
+                      <Panel>
+                        <PanelHeading id="headingOne">
+                          <h4 class="panel-title">
+                            <a
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#collapseOne"
+                              aria-expanded="true"
+                              aria-controls="collapseOne"
+                            >
+                              What is Data Structure?
+                            </a>
+                          </h4>
+                        </PanelHeading>
+                        <div
+                          id="collapseOne"
+                          class="panel-collapse collapse in"
+                          role="tabpanel"
+                          aria-labelledby="headingOne"
+                        >
+                          <div class="panel-body">
+                            Data structure is a fundamental concept of any
+                            programming language, essential for algorithmic
+                            design.
+                          </div>
+                        </div>
+                      </Panel>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a
+                              class="collapsed"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                            >
+                              Benefits of Learning Data Structures
+                            </a>
+                          </h4>
+                        </div>
+                        <div
+                          id="collapseTwo"
+                          class="panel-collapse collapse"
+                          role="tabpanel"
+                          aria-labelledby="headingTwo"
+                        >
+                          <div class="panel-body">
+                            Any given problem has constraints on how fast the
+                            problem should be solved (time) and how much less
+                            resources the problem consumes(space). That is, a
+                            problem is constrained by the space and time
+                            complexity within which it has to be solved
+                            efficiently.
+                          </div>
+                        </div>
+                      </div>
+                      <PanelGroup class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a
+                              class="collapsed"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                            >
+                              What is an array?
+                            </a>
+                          </h4>
+                        </div>
+                        <div
+                          id="collapseThree"
+                          class="panel-collapse collapse"
+                          role="tabpanel"
+                          aria-labelledby="headingThree"
+                        >
+                          <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod
+                            high life accusamus terry richardson ad squid.{" "}
+                          </div>
+                        </div>
+                      </PanelGroup>
+                    </PanelGroup>
+                  </Colmd12>
+                </Row>
+              </Container>
             </Pricefaq>
           </Container>
         </PricingSection>

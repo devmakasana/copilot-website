@@ -75,6 +75,10 @@ const FcfeatureWrap = styled.div`
   padding: 60px 0;
   background-color: ${({ theme }) => theme.colors.black};
 
+  background-image: url("/images/ctabg.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
   /* overflow: hidden;
   &.dnone {
     display: none;
@@ -116,8 +120,8 @@ const PrimaryButton = styled.div`
     ${ButtonText}
     display: inline-block;
     letter-spacing: 0.02em;
-    padding: 12px 35px;
-    border-radius: 26px;
+    padding: 11px 35px;
+    border-radius: 48px;
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.whiteColor};
     text-decoration: none;

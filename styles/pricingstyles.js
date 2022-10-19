@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import {
   Body2,
   Body3,
@@ -330,6 +330,45 @@ const Pricefaq = styled.div`
   }
   margin: 0 0 60px 0;
 `;
+const Colmd12 = styled.div``;
+const PanelGroup = styled.div``;
+const FaqMain = styled.div``;
+const FaqSub = styled.div``;
+const Row = styled.div`
+  .panel-title > a:before {
+    float: right !important;
+    font-family: FontAwesome;
+    content: "\f068";
+    padding-right: 5px;
+  }
+  body {
+    background-color: #f5f5f5;
+  }
+  .panel-title > a.collapsed:before {
+    float: right !important;
+    content: "\f067";
+  }
+  .panel-title > a:hover,
+  .panel-title > a:active,
+  .panel-title > a:focus {
+    text-decoration: none;
+  }
+  .panel-heading {
+    padding: 20px 15px;
+    border-bottom: 1px solid transparent;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  .panel {
+    margin-bottom: 20px !important;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
+  }
+`;
+const Panel = styled.div``;
+const PanelHeading = styled.div``;
 export {
   HeroHeading,
   HeroSection,
@@ -364,4 +403,11 @@ export {
   PriceImage,
   PriceImageLeft,
   Pricefaq,
+  FaqMain,
+  FaqSub,
+  Row,
+  Panel,
+  PanelHeading,
+  Colmd12,
+  PanelGroup,
 };

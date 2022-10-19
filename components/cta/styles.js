@@ -1,15 +1,16 @@
 import styled from "styled-components";
-import { Heading, Heading2, Body1 } from "../../styles/styles";
+import { Heading, Heading2 } from "../../styles/styles";
 
 const CtaInner = styled.div`
   text-align: center;
   h2 {
     color: ${({ theme }) => theme.colors.primary};
-    ${Heading};
+    ${Heading2};
     padding-bottom: 40px;
     margin: 0;
     span {
       color: ${({ theme }) => theme.colors.greenlight};
+      display: block;
     }
   }
 `;

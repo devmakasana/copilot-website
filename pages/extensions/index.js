@@ -26,6 +26,7 @@ import {
   CardSub,
   CardInfo,
   SchedulingApps,
+  MenuWrap,
 } from "../../styles/extensionsStyles";
 import { Container, PrimaryButton } from "../../styles/commonStyles";
 import CTA from "../../components/cta/cta";
@@ -62,35 +63,37 @@ export default function Extensions({ allPosts }) {
           <Container>
             <FeatureWrap>
               <FeatureLeft>
-                <Input placeholder="Find a product..." />
-                <Catagory>
-                  <h4>Categories</h4>
-                  <Catagoryitem>
-                    <Link href={"#Brief-Section"}>
-                      <a>All</a>
-                    </Link>
-                  </Catagoryitem>
-                  <Catagoryitem>
-                    <Link href={"#Brief-Section"}>
-                      <a>Project management</a>
-                    </Link>
-                  </Catagoryitem>
-                  <Catagoryitem>
-                    <Link href={"#Brief-Section"}>
-                      <a>Data visualization</a>
-                    </Link>
-                  </Catagoryitem>
-                  <Catagoryitem>
-                    <Link href={"#Brief-Section"}>
-                      <a>Scheduling</a>
-                    </Link>
-                  </Catagoryitem>
-                  <Catagoryitem>
-                    <Link href={"#Integrations-Section"}>
-                      <a>Integrations</a>
-                    </Link>
-                  </Catagoryitem>
-                </Catagory>
+                <MenuWrap>
+                  <Input placeholder="Find a product..." />
+                  <Catagory>
+                    <h4>Categories</h4>
+                    <Catagoryitem className="active">
+                      <Link href={"#Brief-Section"}>
+                        <a>All</a>
+                      </Link>
+                    </Catagoryitem>
+                    <Catagoryitem>
+                      <Link href={"#Brief-Section"}>
+                        <a>Project management</a>
+                      </Link>
+                    </Catagoryitem>
+                    <Catagoryitem>
+                      <Link href={"#Brief-Section"}>
+                        <a>Data visualization</a>
+                      </Link>
+                    </Catagoryitem>
+                    <Catagoryitem>
+                      <Link href={"#Brief-Section"}>
+                        <a>Scheduling</a>
+                      </Link>
+                    </Catagoryitem>
+                    <Catagoryitem>
+                      <Link href={"#Integrations-Section"}>
+                        <a>Integrations</a>
+                      </Link>
+                    </Catagoryitem>
+                  </Catagory>
+                </MenuWrap>
               </FeatureLeft>
 
               <FeatureRight>
